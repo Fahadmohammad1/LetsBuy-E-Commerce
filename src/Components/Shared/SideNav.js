@@ -3,8 +3,8 @@ import React from "react";
 const SideNav = () => {
   return (
     <div>
-      <div class="h-screen w-screen flex bg-gray-200">
-        <aside class="flex flex-col items-center bg-white text-gray-700 shadow h-full">
+      <div class="h-screen w-5 hidden md:flex fixed">
+        <div class="flex flex-col items-center  text-gray-700 shadow h-full">
           <div class="h-16 flex items-center w-full">
             <a class="h-6 w-6 mx-auto" href="http://svelte.dev/">
               <img
@@ -19,7 +19,7 @@ const SideNav = () => {
             <li class="hover:bg-gray-100">
               <a
                 href="."
-                class="h-16 px-6 flex flex justify-center items-center w-full
+                class="h-16 px-6 flex justify-center items-center w-full
                       focus:text-orange-500"
               >
                 <svg
@@ -47,7 +47,7 @@ const SideNav = () => {
             <li class="hover:bg-gray-100">
               <a
                 href="."
-                class="h-16 px-6 flex flex justify-center items-center w-full
+                class="h-16 px-6 flex justify-center items-center w-full
                       focus:text-orange-500"
               >
                 <svg
@@ -70,7 +70,7 @@ const SideNav = () => {
             <li class="hover:bg-gray-100">
               <a
                 href="."
-                class="h-16 px-6 flex flex justify-center items-center w-full
+                class="h-16 px-6 flex justify-center items-center w-full
                       focus:text-orange-500"
               >
                 <svg
@@ -97,7 +97,7 @@ const SideNav = () => {
             <li class="hover:bg-gray-100">
               <a
                 href="."
-                class="h-16 px-6 flex flex justify-center items-center w-full
+                class="h-16 px-6 flex justify-center items-center w-full
                       focus:text-orange-500"
               >
                 <svg
@@ -125,7 +125,7 @@ const SideNav = () => {
             <li class="hover:bg-gray-100">
               <a
                 href="."
-                class="h-16 px-6 flex flex justify-center items-center w-full
+                class="h-16 px-6 flex justify-center items-center w-full
                       focus:text-orange-500"
               >
                 <svg
@@ -165,7 +165,7 @@ const SideNav = () => {
             <li class="hover:bg-gray-100">
               <a
                 href="."
-                class="h-16 px-6 flex flex justify-center items-center w-full
+                class="h-16 px-6 flex justify-center items-center w-full
                       focus:text-orange-500"
               >
                 <svg
@@ -210,7 +210,7 @@ const SideNav = () => {
               </svg>
             </button>
           </div>
-        </aside>
+        </div>
       </div>
     </div>
   );

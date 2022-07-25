@@ -3,11 +3,13 @@ import "./App.css";
 import Login from "./Components/Authentication/Login";
 import Home from "./Components/Home/Home";
 import Header from "./Components/Shared/Header";
+import SideNav from "./Components/Shared/SideNav";
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <SideNav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
