@@ -3,7 +3,7 @@ import React from "react";
 const SideNav = () => {
   return (
     <div>
-      <div class="h-screen w-5 hidden md:flex fixed">
+      <div class="h-screen w-5 hidden md:flex fixed z-40">
         <div class="flex flex-col items-center  text-gray-700 shadow h-full">
           <div class="h-16 flex items-center w-full">
             <a class="h-6 w-6 mx-auto" href="http://svelte.dev/">

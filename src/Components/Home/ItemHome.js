@@ -2,8 +2,8 @@ import React from "react";
 
 const ItemHome = () => {
   return (
-    <div className="grid grid-cols-3">
-      <div class="card w-96 bg-base-100 shadow-xl ml-auto">
+    <div className="grid md:grid-cols-3 container ml-auto">
+      <div class="card max-w-md bg-base-100 shadow-xl ml-auto">
         <figure class="px-10 pt-10">
           <img
             src="https://placeimg.com/400/225/arch"
@@ -19,7 +19,7 @@ const ItemHome = () => {
           </div>
         </div>
       </div>
-      <div class="card w-96 bg-base-100 shadow-xl ml-auto">
+      <div class="card w-auto bg-base-100 shadow-xl ml-auto">
         <figure class="px-10 pt-10">
           <img
             src="https://placeimg.com/400/225/arch"
@@ -35,7 +35,7 @@ const ItemHome = () => {
           </div>
         </div>
       </div>
-      <div class="card w-96 bg-base-100 shadow-xl">
+      <div class="card max-w-md bg-base-100 shadow-xl">
         <figure class="px-10 pt-10">
           <img
             src="https://placeimg.com/400/225/arch"
