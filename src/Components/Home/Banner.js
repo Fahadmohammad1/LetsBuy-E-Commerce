@@ -1,58 +1,42 @@
-import React from "react";
-import background from "../../images/sale.jpg";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./BannerStyle.css";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import image1 from "../../images/sale.jpg";
 
 const Banner = () => {
   return (
     <div className="container ml-auto">
-      <div class="min-h-screen">
-        <div>
-          <div class="carousel min-h-screen w-full">
-            <div id="slide1" class="carousel-item relative w-full">
-              <img src={background} class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" class="btn btn-circle">
-                  ❮
-                </a>
-                <a href="#slide2" class="btn btn-circle">
-                  ❯
-                </a>
+      <div class="">
+        <>
+          <Swiper
+            cssMode={true}
+            navigation={true}
+            pagination={true}
+            mousewheel={true}
+            keyboard={true}
+            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="flex">
+                <h1>hello</h1>
+                <img src={image1} alt="" />
               </div>
-            </div>
-            <div id="slide2" class="carousel-item relative w-full">
-              <img src="https://placeimg.com/800/200/arch" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">
-                  ❮
-                </a>
-                <a href="#slide3" class="btn btn-circle">
-                  ❯
-                </a>
-              </div>
-            </div>
-            <div id="slide3" class="carousel-item relative w-full">
-              <img src="https://placeimg.com/800/200/arch" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" class="btn btn-circle">
-                  ❮
-                </a>
-                <a href="#slide4" class="btn btn-circle">
-                  ❯
-                </a>
-              </div>
-            </div>
-            <div id="slide4" class="carousel-item relative w-full">
-              <img src="https://placeimg.com/800/200/arch" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" class="btn btn-circle">
-                  ❮
-                </a>
-                <a href="#slide1" class="btn btn-circle">
-                  ❯
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+            </SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>Slide 4</SwiperSlide>
+            <SwiperSlide>Slide 5</SwiperSlide>
+            <SwiperSlide>Slide 6</SwiperSlide>
+            <SwiperSlide>Slide 7</SwiperSlide>
+            <SwiperSlide>Slide 8</SwiperSlide>
+            <SwiperSlide>Slide 9</SwiperSlide>
+          </Swiper>
+        </>
       </div>
     </div>
   );

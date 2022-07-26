@@ -1,56 +1,70 @@
 import React from "react";
+import Slider from "react-slick";
 
 const ItemHome = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+  };
   return (
-    <div className="grid md:grid-cols-3 container ml-auto">
-      <div class="card max-w-md bg-base-100 shadow-xl ml-auto">
-        <figure class="px-10 pt-10">
+    <div className="container ml-auto">
+      <h2 className="my-5 font-bold text-2xl">Category</h2>
+      <Slider {...settings}>
+        <div className="">
           <img
-            src="https://placeimg.com/400/225/arch"
-            alt="Shoes"
-            class="rounded-xl"
+            src="https://www.pngall.com/wp-content/uploads/5/Purse-PNG-Pic.png"
+            alt=""
+            className="mx-auto w-44"
           />
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
+          <span className="font-bold py-3">Ladies Bag</span>
         </div>
-      </div>
-      <div class="card w-auto bg-base-100 shadow-xl ml-auto">
-        <figure class="px-10 pt-10">
+        <div>
           <img
-            src="https://placeimg.com/400/225/arch"
-            alt="Shoes"
-            class="rounded-xl"
+            src="https://www.pngall.com/wp-content/uploads/5/Purse-PNG-Pic.png"
+            alt=""
+            className="mx-auto w-44"
           />
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
+          <span className="font-bold py-3">Ladies Bag</span>
         </div>
-      </div>
-      <div class="card max-w-md bg-base-100 shadow-xl">
-        <figure class="px-10 pt-10">
+        <div>
           <img
-            src="https://placeimg.com/400/225/arch"
-            alt="Shoes"
-            class="rounded-xl"
+            src="https://www.pngall.com/wp-content/uploads/5/Purse-PNG-Pic.png"
+            alt=""
+            className="mx-auto w-44"
           />
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
+          <span className="font-bold py-3">Ladies Bag</span>
         </div>
-      </div>
+        <div>
+          <img
+            src="https://www.pngall.com/wp-content/uploads/5/Purse-PNG-Pic.png"
+            alt=""
+            className="mx-auto w-44"
+          />
+          <span className="font-bold py-3">Ladies Bag</span>
+        </div>
+        <div>
+          <img
+            src="https://www.pngall.com/wp-content/uploads/5/Purse-PNG-Pic.png"
+            alt=""
+            className="mx-auto w-44"
+          />
+          <span className="font-bold py-3">Ladies Bag</span>
+        </div>
+        <div>
+          <img
+            src="https://www.pngall.com/wp-content/uploads/5/Purse-PNG-Pic.png"
+            alt=""
+            className="mx-auto w-44"
+          />
+          <span className="font-bold py-3">Ladies Bag</span>
+        </div>
+      </Slider>
     </div>
   );
 };
