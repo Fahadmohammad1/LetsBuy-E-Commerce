@@ -12,7 +12,7 @@ import Support from "./Components/Support/Support";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <SideNav />
       <Routes>

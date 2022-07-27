@@ -14,7 +14,7 @@ const ItemHome = () => {
   };
   return (
     <div className="container ml-auto">
-      <h2 className="my-5 font-bold text-2xl">Category</h2>
+      <h2 className="my-10 font-bold text-2xl ml-2">Categories</h2>
       <Slider {...settings}>
         <div className="">
           <img
@@ -22,7 +22,7 @@ const ItemHome = () => {
             alt=""
             className="mx-auto w-44"
           />
-          <span className="font-bold py-3">Ladies Bag</span>
+          <span className="font-bold py-3 pl-3">Fashion</span>
         </div>
         <div>
           <img
@@ -30,7 +30,7 @@ const ItemHome = () => {
             alt=""
             className="mx-auto w-44"
           />
-          <span className="font-bold py-3">Ladies Bag</span>
+          <span className="font-bold py-3">Beauty</span>
         </div>
         <div>
           <img
@@ -38,7 +38,7 @@ const ItemHome = () => {
             alt=""
             className="mx-auto w-44"
           />
-          <span className="font-bold py-3">Ladies Bag</span>
+          <span className="font-bold py-3">Electronics</span>
         </div>
         <div>
           <img
@@ -46,7 +46,7 @@ const ItemHome = () => {
             alt=""
             className="mx-auto w-44"
           />
-          <span className="font-bold py-3">Ladies Bag</span>
+          <span className="font-bold py-3">Groceries</span>
         </div>
         <div>
           <img
@@ -54,7 +54,7 @@ const ItemHome = () => {
             alt=""
             className="mx-auto w-44"
           />
-          <span className="font-bold py-3">Ladies Bag</span>
+          <span className="font-bold py-3">Sports</span>
         </div>
         <div>
           <img
@@ -62,7 +62,7 @@ const ItemHome = () => {
             alt=""
             className="mx-auto w-44"
           />
-          <span className="font-bold py-3">Ladies Bag</span>
+          <span className="font-bold py-3">Vehicles</span>
         </div>
       </Slider>
     </div>
