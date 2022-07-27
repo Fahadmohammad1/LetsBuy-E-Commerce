@@ -3,7 +3,7 @@ import React from "react";
 const DiscountBanner = () => {
   return (
     <div className="container ml-auto lg:px-6 mt-20">
-      <div class="p-6 py-12 dark:bg-pink-500 dark:text-gray-900 rounded-full">
+      <div class="p-6 py-12 bg-pink-500 text-gray-900 rounded-full">
         <div class="container mx-auto">
           <div class="flex flex-col lg:flex-row items-center justify-between">
             <h2 class="text-center text-6xl tracking-tighter font-bold">

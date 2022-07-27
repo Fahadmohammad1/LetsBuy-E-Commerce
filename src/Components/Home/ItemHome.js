@@ -14,7 +14,9 @@ const ItemHome = () => {
   };
   return (
     <div className="container ml-auto">
-      <h2 className="my-10 font-bold text-2xl ml-2">Categories</h2>
+      <h2 className="my-10 font-bold text-3xl ml-2 text-gray-800">
+        Categories
+      </h2>
       <Slider {...settings}>
         <div className="">
           <img

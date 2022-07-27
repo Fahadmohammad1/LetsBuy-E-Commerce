@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Gallery = () => {
+  const [isHovering, setIsHovering] = useState(false);
+  const [isHoveringTwo, setIsHoveringTwo] = useState(false);
+  const [isHoveringThree, setIsHoveringThree] = useState(false);
+  const [isHoveringFour, setIsHoveringFour] = useState(false);
   return (
-    <div className="container ml-auto">
+    <div className="container ml-auto mt-10">
+      <h2 className="font-bold text-3xl ml-2 text-gray-800">New Collection</h2>
       <div class="flex justify-center items-center">
         <div class="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
           <div class="flex flex-col jusitfy-center items-center space-y-10">
-            <div class="flex flex-col justify-center items-center ">
-              <h1 class="text-3xl xl:text-4xl font-semibold leading-7 xl:leading-9 text-gray-800 dark:text-white">
-                Shop By Category
-              </h1>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-x-8 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  md:gap-x-8 w-full">
               <div class="relative group flex justify-center items-center h-full w-full">
+                {isHovering && (
+                  <h3 className="absolute uppercase font-bold text-xl">
+                    wear good, looks good
+                  </h3>
+                )}
                 <img
-                  class="object-center object-cover h-full w-full"
+                  onMouseOver={() => setIsHovering(true)}
+                  onMouseOut={() => setIsHovering(false)}
+                  class="object-center object-cover h-full w-full hover:opacity-50"
                   src="https://i.ibb.co/ThPFmzv/omid-armin-m-VSb6-PFk-VXw-unsplash-1-1.png"
                   alt="girl"
                 />
@@ -26,8 +33,15 @@ const Gallery = () => {
 
               <div class="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
                 <div class="relative group flex justify-center items-center h-full w-full">
+                  {isHoveringTwo && (
+                    <h3 className="absolute uppercase font-bold text-xl">
+                      Choose your best shoes
+                    </h3>
+                  )}
                   <img
-                    class="object-center object-cover h-full w-full"
+                    onMouseOver={() => setIsHoveringTwo(true)}
+                    onMouseOut={() => setIsHoveringTwo(false)}
+                    class="object-center hover:opacity-50 object-cover h-full w-full"
                     src="https://i.ibb.co/SXZvYHs/irene-kredenets-DDqx-X0-7v-KE-unsplash-1.png"
                     alt="shoe"
                   />
@@ -37,8 +51,15 @@ const Gallery = () => {
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
                 <div class="relative group flex justify-center items-center h-full w-full">
+                  {isHoveringThree && (
+                    <h3 className="absolute uppercase font-bold text-xl">
+                      The beauty of your hands
+                    </h3>
+                  )}
                   <img
-                    class="object-center object-cover h-full w-full"
+                    onMouseOver={() => setIsHoveringThree(true)}
+                    onMouseOut={() => setIsHoveringThree(false)}
+                    class="object-center hover:opacity-50 object-cover h-full w-full"
                     src="https://i.ibb.co/Hd1pVxW/louis-mornaud-Ju-6-TPKXd-Bs-unsplash-1-2.png"
                     alt="watch"
                   />
@@ -50,8 +71,15 @@ const Gallery = () => {
               </div>
 
               <div class="relative group justify-center items-center h-full w-full hidden lg:flex">
+                {isHoveringFour && (
+                  <h3 className="absolute uppercase font-bold text-xl">
+                    New fashion, New jewellery
+                  </h3>
+                )}
                 <img
-                  class="object-center object-cover h-full w-full"
+                  onMouseOver={() => setIsHoveringFour(true)}
+                  onMouseOut={() => setIsHoveringFour(false)}
+                  class="object-center hover:opacity-50 object-cover h-full w-full"
                   src="https://i.ibb.co/PTtRBLL/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-1.png"
                   alt="girl-"
                 />
