@@ -23,18 +23,34 @@ const Banner = () => {
           >
             <SwiperSlide>
               <div className="flex">
-                <h1>hello</h1>
                 <img src={image1} alt="" />
               </div>
             </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            <SwiperSlide>
+              <div className="flex">
+                <img src={image1} alt="" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex">
+                <img src={image1} alt="" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex">
+                <img src={image1} alt="" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex">
+                <img src={image1} alt="" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex">
+                <img src={image1} alt="" />
+              </div>
+            </SwiperSlide>
           </Swiper>
         </>
       </div>

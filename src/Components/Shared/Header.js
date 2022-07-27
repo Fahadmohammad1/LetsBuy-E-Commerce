@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -29,16 +29,16 @@ const Header = () => {
               class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a>My Orders</a>
+                <Link to="/dashboard">Dashboard</Link>
               </li>
               <li>
-                <a>About</a>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <a>Support</a>
+                <Link to="/support">Support</Link>
               </li>
             </ul>
           </div>
@@ -51,7 +51,12 @@ const Header = () => {
           </a>
         </div>
         <div class="navbar-end">
-          <button class="btn btn-sm text-[#FF4E16] bg-slate-100">LOGIN</button>
+          <button
+            onClick={() => navigate("/login")}
+            class="btn btn-sm text-[#FF4E16] bg-slate-100"
+          >
+            LOGIN
+          </button>
         </div>
       </div>
     </nav>

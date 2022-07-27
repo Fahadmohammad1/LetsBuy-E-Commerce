@@ -3,6 +3,8 @@ import Banner from "./Banner";
 import DiscountBanner from "./DiscountBanner";
 import Gallery from "./Gallery";
 import ItemHome from "./ItemHome";
+import Shop from "./Shop";
+// import TestRedux from "./TestRedux";
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <ItemHome />
       <DiscountBanner />
       <Gallery />
+      <Shop />
+      {/* <TestRedux /> */}
     </div>
   );
 };

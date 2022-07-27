@@ -2,7 +2,7 @@ import React from "react";
 
 const DiscountBanner = () => {
   return (
-    <div className="container ml-auto lg:px-6 mt-10">
+    <div className="container ml-auto lg:px-6 mt-14">
       <div class="p-6 py-12 dark:bg-pink-500 dark:text-gray-900 rounded-full">
         <div class="container mx-auto">
           <div class="flex flex-col lg:flex-row items-center justify-between">
