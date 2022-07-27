@@ -4,8 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <nav className="sticky top-0 z-40 bg-white">
-      <div class="navbar bg-base-100">
+    <nav className="sticky top-0 z-40 bg-slate-100">
+      <div class="navbar bg-slate-100">
         <div class="navbar-start">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -53,7 +53,7 @@ const Header = () => {
         <div class="navbar-end">
           <button
             onClick={() => navigate("/login")}
-            class="btn btn-sm text-[#FF4E16] bg-slate-100"
+            class="btn btn-sm text-[#FF4E16] bg-white"
           >
             LOGIN
           </button>
