@@ -1,4 +1,5 @@
 import React from "react";
+import { Counter } from "../../features/counter/Counter";
 import Banner from "./Banner";
 import DiscountBanner from "./DiscountBanner";
 import Gallery from "./Gallery";
@@ -14,6 +15,7 @@ const Home = () => {
       <ItemHome />
       <DiscountBanner />
       <Gallery />
+      <Counter />
 
       {/* <TestRedux /> */}
     </div>

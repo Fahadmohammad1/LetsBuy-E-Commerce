@@ -7,6 +7,8 @@ import { BrowserRouter } from "react-router-dom";
 import "swiper/css/bundle";
 import { Provider } from "react-redux";
 import store from "./store";
+// import { createStore } from "redux";
+// import rootReducer from "./reducers";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
