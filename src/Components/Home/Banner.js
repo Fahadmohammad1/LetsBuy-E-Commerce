@@ -4,28 +4,39 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./BannerStyle.css";
-import { Autoplay, Pagination, Navigation } from "swiper";
-import image1 from "../../images/headphone.png";
-import image2 from "../../images/xbox.png";
-import image3 from "../../images/tv.png";
+import { Autoplay, Pagination } from "swiper";
+import image1 from "../../Assets/images/headphone.png";
+import image2 from "../../Assets/images/xbox.png";
+import image3 from "../../Assets/images/tv.png";
+import bag from "../../Assets/images/banner/bag.jpg";
+import watch from "../../Assets/images/banner/watch.jpg";
+import shoes from "../../Assets/images/banner/shoes.jpg";
+import headphone from "../../Assets/images/banner/headphone.jpg";
 
 const Banner = () => {
   return (
-    <div className="container ml-auto">
+    <div className="grid grid-cols-4 gap-3 px-5 h-screen ">
       <div className="">
+        <div className="card w-auto bg-emerald-50 shadow-xl mb-3">
+          <img src={bag} alt="bag" />
+        </div>
+        <div className="card w-auto bg-orange-50 shadow-xl">
+          <img src={watch} alt="watch" />
+        </div>
+      </div>
+      <div className="col-span-2">
         <>
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-              delay: 2500,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             pagination={{
               clickable: true,
             }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Pagination]}
             className="mySwiper"
           >
             <SwiperSlide>
@@ -73,10 +84,7 @@ const Banner = () => {
                 </div>
               </div>
               <div className="w-1/2">
-                <img
-                  src="https://www.pngall.com/wp-content/uploads/5/Samsung-TV-PNG-File-Download-Free.png"
-                  alt=""
-                />
+                <img src={image3} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -97,6 +105,14 @@ const Banner = () => {
             </SwiperSlide>
           </Swiper>
         </>
+      </div>
+      <div className="">
+        <div className="card w-auto bg-lime-50 shadow-xl mb-3">
+          <img src={headphone} alt="headphone" />
+        </div>
+        <div className="card w-auto bg-sky-50 shadow-xl">
+          <img src={shoes} alt="shoes" />
+        </div>
       </div>
     </div>
   );

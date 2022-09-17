@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Watch",
     "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
     "price": 1200,
@@ -8,6 +9,7 @@
     "brand": "Apple"
   },
   {
+    "id": 2,
     "name": "Watch",
     "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
     "price": 1200,
@@ -16,6 +18,7 @@
     "brand": "Apple"
   },
   {
+    "id": 3,
     "name": "Watch",
     "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
     "price": 1200,
@@ -24,6 +27,7 @@
     "brand": "Apple"
   },
   {
+    "id": 4,
     "name": "Watch",
     "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
     "price": 1200,
@@ -32,6 +36,7 @@
     "brand": "Apple"
   },
   {
+    "id": 5,
     "name": "Watch",
     "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
     "price": 1200,
@@ -40,6 +45,7 @@
     "brand": "Apple"
   },
   {
+    "id": 6,
     "name": "Watch",
     "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
     "price": 1200,
@@ -48,6 +54,7 @@
     "brand": "Apple"
   },
   {
+    "id": 7,
     "name": "Watch",
     "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
     "price": 1200,
@@ -56,6 +63,7 @@
     "brand": "Apple"
   },
   {
+    "id": 8,
     "name": "Watch",
     "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
     "price": 1200,
@@ -64,6 +72,7 @@
     "brand": "Apple"
   },
   {
+    "id": 9,
     "name": "Watch",
     "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
     "price": 1200,

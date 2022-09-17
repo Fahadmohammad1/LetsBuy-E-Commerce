@@ -12,9 +12,9 @@ import Support from "./Components/Support/Support";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
-      <SideNav />
+      {/* <SideNav /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

@@ -5,19 +5,17 @@ import DiscountBanner from "./DiscountBanner";
 import Gallery from "./Gallery";
 import ItemHome from "./ItemHome";
 import Shop from "./Shop";
-// import TestRedux from "./TestRedux";
+import Shops from "./Shops";
 
 const Home = () => {
   return (
     <div>
       <Banner />
+      <DiscountBanner />
       <Shop />
       <ItemHome />
-      <DiscountBanner />
       <Gallery />
       <Counter />
-
-      {/* <TestRedux /> */}
     </div>
   );
 };
