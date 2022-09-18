@@ -7,7 +7,10 @@ const Gallery = () => {
   const [isHoveringFour, setIsHoveringFour] = useState(false);
   return (
     <div className="container mx-auto mt-10">
-      <h2 className="font-bold text-3xl ml-2 text-gray-800">New Collection</h2>
+      <h2 className="font-bold text-3xl border-b-2 border-[#FF4E16] inline-block text-gray-800">
+        New Collection
+      </h2>
+      <hr />
       <div class="flex justify-center items-center">
         <div class="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
           <div class="flex flex-col jusitfy-center items-center space-y-10">

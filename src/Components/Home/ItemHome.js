@@ -11,12 +11,14 @@ const ItemHome = () => {
     speed: 3000,
     autoplaySpeed: 2000,
     cssEase: "linear",
+    marginTop: "40px",
   };
   return (
     <div className="container mx-auto">
-      <h2 className="my-10 font-bold text-3xl ml-2 text-gray-800">
+      <h2 className="mt-10 font-bold text-3xl text-gray-800 inline-block border-b-2 border-[#FF4E16]">
         Categories
       </h2>
+      <hr className="mb-10" />
       <Slider {...settings}>
         <div className="">
           <img
