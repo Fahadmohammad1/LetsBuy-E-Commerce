@@ -5,14 +5,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./BannerStyle.css";
 import { Autoplay, Pagination } from "swiper";
-import image1 from "../../Assets/images/banner/headphone.png";
-import image2 from "../../Assets/images/banner/xbox.png";
-import image3 from "../../Assets/images/banner/tv.png";
 import bag from "../../Assets/images/banner/bag.jpg";
 import watch from "../../Assets/images/banner/watch.jpg";
 import shoes from "../../Assets/images/banner/shoes.jpg";
 import headphone from "../../Assets/images/banner/headphone.jpg";
-import sale from "../../Assets/images/banner/discount-2.jpg";
+import discount from "../../Assets/images/banner/discount-3.png";
+import discount2 from "../../Assets/images/banner/discount-1.png";
+import tv from "../../Assets/images/banner/tv.png";
+import headset from "../../Assets/images/banner/headset.png";
 
 const Banner = () => {
   return (
@@ -37,16 +37,16 @@ const Banner = () => {
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
+            modules={[Autoplay, Pagination]}
             className="mySwiper"
           >
             <SwiperSlide>
-              <img className="rounded-2xl" src={sale} alt="" />
+              <img className="rounded-2xl" src={discount} alt="" />
             </SwiperSlide>
-            <SwiperSlide className="pl-4">
+            <SwiperSlide className="pl-5">
               <div className="">
-                <div className="w-1/2 mx-auto">
-                  <img src={image3} alt="" />
+                <div className="w-2/3 mx-auto pb-5">
+                  <img src={tv} alt="" />
                 </div>
                 <div>
                   <div className="">
@@ -63,15 +63,18 @@ const Banner = () => {
                 </div>
               </div>
             </SwiperSlide>
+            <SwiperSlide>
+              <img className="rounded-2xl" src={discount2} alt="" />
+            </SwiperSlide>
             <SwiperSlide className="pl-5">
               <div>
-                <div className="w-1/2 mx-auto pb-5">
-                  <img src={image1} alt="" />
+                <div className="w-2/3 mx-auto pb-5">
+                  <img src={headset} alt="" />
                 </div>
                 <div>
                   <div className="text-justify">
                     <h1 className="text-5xl font-bold">
-                      Mega LCD TV For Sports
+                      Kotion Gaming Headset
                     </h1>
                     <p>
                       This is the best tv in the world for people who just want
