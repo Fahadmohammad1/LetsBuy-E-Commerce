@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <nav className="sticky top-0 z-40 bg-slate-100">
+    <nav className="sticky top-0 z-40 bg-white">
       <div class="navbar bg-slate-100">
         <div class="navbar-start">
           <div class="dropdown">

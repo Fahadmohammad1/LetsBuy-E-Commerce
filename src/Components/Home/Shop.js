@@ -2,7 +2,7 @@ import React from "react";
 
 const Shop = () => {
   return (
-    <section className="container ml-auto my-10">
+    <section className="container mx-auto my-10">
       <h2 className="font-bold ml-2 text-3xl text-gray-800 mb-7">Popular</h2>
       <div className="">
         <div class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">

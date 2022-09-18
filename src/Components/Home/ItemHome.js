@@ -13,7 +13,7 @@ const ItemHome = () => {
     cssEase: "linear",
   };
   return (
-    <div className="container ml-auto">
+    <div className="container mx-auto">
       <h2 className="my-10 font-bold text-3xl ml-2 text-gray-800">
         Categories
       </h2>
