@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import DiscountBanner from "./DiscountBanner";
 import Gallery from "./Gallery";
 import ItemHome from "./ItemHome";
+import NewProducts from "./NewProducts";
 import Shop from "./Shop";
 import Shops from "./Shops";
 
@@ -12,8 +13,9 @@ const Home = () => {
     <div>
       <Banner />
       <DiscountBanner />
-      <Shop />
+      <NewProducts />
       <ItemHome />
+      <Shop />
       <Gallery />
       <Counter />
     </div>
