@@ -36,12 +36,12 @@ const Register = () => {
             <div class="mt-6">
               <form>
                 <div>
-                  <label class="mb-2.5 block font-extrabold" for="email">
+                  <label class="mb-2.5 block font-extrabold" for="name">
                     Name
                   </label>
                   <input
                     type="text"
-                    id="email"
+                    id="name"
                     class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30"
                     placeholder="Name"
                   />
@@ -58,7 +58,7 @@ const Register = () => {
                   />
                 </div>
                 <div class="mt-4">
-                  <label class="mb-2.5 block font-extrabold" for="email">
+                  <label class="mb-2.5 block font-extrabold" for="password">
                     Password
                   </label>
                   <input
@@ -68,12 +68,15 @@ const Register = () => {
                   />
                 </div>
                 <div class="mt-4">
-                  <label class="mb-2.5 block font-extrabold" for="email">
+                  <label
+                    class="mb-2.5 block font-extrabold"
+                    for="confirmPassword"
+                  >
                     Confirm Password
                   </label>
                   <input
                     type="password"
-                    id="password"
+                    id="confirmPassword"
                     class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow"
                   />
                 </div>
