@@ -3,21 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
 import "swiper/css/bundle";
-import { Provider } from "react-redux";
-import store from "./store";
-// import { createStore } from "redux";
-// import rootReducer from "./reducers";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
 

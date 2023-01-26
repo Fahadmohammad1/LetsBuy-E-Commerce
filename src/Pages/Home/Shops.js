@@ -8,7 +8,7 @@ const Shops = () => {
     fetch("shopitem.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
-  }, []);
+  }, [setProducts]);
   return (
     <section className="container mx-auto my-10">
       <h2 className="font-bold ml-2 text-3xl text-gray-800 mb-7">Popular</h2>

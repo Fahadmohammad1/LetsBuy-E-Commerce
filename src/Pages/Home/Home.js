@@ -6,7 +6,7 @@ import Gallery from "./Gallery";
 import ItemHome from "./ItemHome";
 import NewProducts from "./NewProducts";
 import Shop from "./Shop";
-import Shops from "./Shops";
+// import Shops from "./Shops";
 
 const Home = () => {
   return (

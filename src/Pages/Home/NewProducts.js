@@ -4,10 +4,10 @@ import NewProduct from "./NewProduct";
 const NewProducts = () => {
   return (
     <section className="container mx-auto">
-      <h2 className="font-bold text-3xl border-b-2 border-[#FF4E16] inline-block text-gray-800">
+      <h2 className="font-bold text-3xl border-b-2 border-[#FF4E16] inline-block text-gray-800 mt-10">
         New Product
       </h2>
-      <hr />
+      <hr className="mb-10" />
       <NewProduct />
     </section>
   );
