@@ -1,11 +1,10 @@
 import React from "react";
-
 import Banner from "./Banner";
 import DiscountBanner from "./DiscountBanner";
 import Gallery from "./Gallery";
 import ItemHome from "./ItemHome";
 import NewProducts from "./NewProducts";
-import Shop from "./Shop";
+import PopularProducts from "./PopularProducts";
 
 const Home = () => {
   return (
@@ -14,7 +13,7 @@ const Home = () => {
       <DiscountBanner />
       <NewProducts />
       <ItemHome />
-      <Shop />
+      <PopularProducts />
       <Gallery />
     </div>
   );
