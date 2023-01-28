@@ -1,8 +1,8 @@
 import React from "react";
 import Banner from "./Banner";
+import Category from "./Category";
 import DiscountBanner from "./DiscountBanner";
 import Gallery from "./Gallery";
-import ItemHome from "./ItemHome";
 import NewProducts from "./NewProducts";
 import PopularProducts from "./PopularProducts";
 
@@ -12,7 +12,7 @@ const Home = () => {
       <Banner />
       <DiscountBanner />
       <NewProducts />
-      <ItemHome />
+      <Category />
       <PopularProducts />
       <Gallery />
     </div>

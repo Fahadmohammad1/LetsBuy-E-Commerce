@@ -33,7 +33,7 @@ const Register = () => {
     }
     reset();
   };
-  console.log(user, error, updateError);
+  console.log(user, error, updateError, errors);
   return (
     <div>
       <div class="relative flex h-full w-full">

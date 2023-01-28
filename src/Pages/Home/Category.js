@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-const ItemHome = () => {
+const Category = () => {
   const settings = {
     infinite: true,
     slidesToShow: 5,
@@ -105,4 +105,4 @@ const ItemHome = () => {
   );
 };
 
-export default ItemHome;
+export default Category;
