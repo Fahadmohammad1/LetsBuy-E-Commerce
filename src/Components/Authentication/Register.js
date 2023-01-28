@@ -1,11 +1,39 @@
 import React from "react";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
+import Loading from "../../Shared/Loading";
 
 const Register = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  if (loading || updating) {
+    return <Loading />;
+  }
+
+  const handleRegister = async (data) => {
+    await createUserWithEmailAndPassword(data.email, data.password);
+
+    if (user) {
+      await updateProfile({ displayName: data.name });
+    }
+    reset();
+  };
+  console.log(user, error, updateError);
   return (
     <div>
       <div class="relative flex h-full w-full">
@@ -38,12 +66,13 @@ const Register = () => {
               </fieldset>
             </div>
             <div class="mt-6">
-              <form>
+              <form onSubmit={handleSubmit(handleRegister)}>
                 <div>
                   <label class="mb-2.5 block font-extrabold" for="name">
                     Name
                   </label>
                   <input
+                    {...register("name", { required: true })}
                     type="text"
                     id="name"
                     class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30"
@@ -55,6 +84,7 @@ const Register = () => {
                     Email
                   </label>
                   <input
+                    {...register("email", { required: true })}
                     type="email"
                     id="email"
                     class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30"
@@ -66,21 +96,9 @@ const Register = () => {
                     Password
                   </label>
                   <input
+                    {...register("password", { required: true })}
                     type="password"
                     id="password"
-                    class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow"
-                  />
-                </div>
-                <div class="mt-4">
-                  <label
-                    class="mb-2.5 block font-extrabold"
-                    for="confirmPassword"
-                  >
-                    Confirm Password
-                  </label>
-                  <input
-                    type="password"
-                    id="confirmPassword"
                     class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow"
                   />
                 </div>
