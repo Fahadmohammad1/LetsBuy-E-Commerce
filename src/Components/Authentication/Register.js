@@ -1,7 +1,11 @@
 import React from "react";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Register = () => {
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
   return (
     <div>
       <div class="relative flex h-full w-full">
@@ -23,7 +27,7 @@ const Register = () => {
                   alt=""
                   class="mr-2 w-6 object-fill"
                 />
-                Sign in with Google
+                Sign Up with Google
               </button>
             </div>
             <div>
