@@ -4,8 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <nav className="sticky top-0 z-40 bg-white mb-4 container mx-auto">
-      <div className="navbar bg-base-100">
+    <nav className="sticky top-0 z-40 bg-white mb-4">
+      <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,10 +29,10 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="">Item 1</Link>
+                <Link to="">Dashboard</Link>
               </li>
               <li tabIndex={0}>
-                <a className="justify-between">
+                <Link to="" className="justify-between">
                   Parent
                   <svg
                     className="fill-current"
@@ -43,18 +43,18 @@ const Header = () => {
                   >
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                   </svg>
-                </a>
+                </Link>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                    <Link to="">Submenu 1</Link>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <Link to="">Submenu 2</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link to="">Contact</Link>
               </li>
             </ul>
           </div>
@@ -67,10 +67,10 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>About</a>
+              <Link to="">Dashboard</Link>
             </li>
             <li tabIndex={0}>
-              <a>
+              <Link to="">
                 Parent
                 <svg
                   className="fill-current"
@@ -81,23 +81,28 @@ const Header = () => {
                 >
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-              </a>
+              </Link>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                  <Link to="">Submenu 1</Link>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <Link to="">Submenu 2</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link to="">Item 3</Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Get started</a>
+          <button
+            onClick={() => navigate("/login")}
+            class="btn btn-sm text-[#FF4E16] bg-white"
+          >
+            LOGIN
+          </button>
         </div>
       </div>
     </nav>

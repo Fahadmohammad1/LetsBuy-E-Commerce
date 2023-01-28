@@ -16,9 +16,9 @@ import headset from "../../Assets/images/banner/headset.png";
 
 const Banner = () => {
   return (
-    <div className="grid grid-cols-4 gap-3 h-screen container mx-auto">
+    <div className="lg:grid grid-cols-4 gap-3 lg:h-screen container mx-auto">
       <div className="">
-        <div className="card w-auto bg-emerald-50 shadow-xl mb-3">
+        <div className="card w-auto bg-emerald-50 shadow-xl mb-3 ">
           <img src={bag} alt="bag" />
         </div>
         <div className="card w-auto bg-orange-50 shadow-xl">
