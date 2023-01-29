@@ -1,6 +1,6 @@
 import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import auth from "../../firebase.init";
+import auth from "../../firebase/firebase.init";
 import { Link } from "react-router-dom";
 
 const Login = () => {
