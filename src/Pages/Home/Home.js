@@ -5,8 +5,12 @@ import DiscountBanner from "./DiscountBanner";
 import Gallery from "./Gallery";
 import NewProducts from "./NewProducts";
 import PopularProducts from "./PopularProducts";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase/firebase.init";
 
 const Home = () => {
+  const [user, loading, error] = useAuthState(auth);
+  console.log(user, loading, error);
   return (
     <div>
       <Banner />

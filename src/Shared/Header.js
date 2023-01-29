@@ -1,7 +1,14 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
+import auth from "../firebase/firebase.init";
+import Loading from "./Loading";
 
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth);
+  if (loading) {
+    <Loading />;
+  }
   const navigate = useNavigate();
   return (
     <nav className="sticky top-0 z-40 bg-white mb-4">
@@ -97,12 +104,21 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <button
-            onClick={() => navigate("/login")}
-            class="btn btn-sm text-[#FF4E16] bg-white"
-          >
-            LOGIN
-          </button>
+          {user?.uid ? (
+            <button
+              onClick={() => navigate("/")}
+              class="btn btn-sm text-[#FF4E16] bg-white"
+            >
+              LOGOUT
+            </button>
+          ) : (
+            <button
+              onClick={() => navigate("/login")}
+              class="btn btn-sm text-[#FF4E16] bg-white"
+            >
+              LOGIN
+            </button>
+          )}
         </div>
       </div>
     </nav>
