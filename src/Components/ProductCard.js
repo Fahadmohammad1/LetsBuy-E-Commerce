@@ -38,10 +38,10 @@ const ProductCard = (product) => {
             type="radio"
             name="rating-5"
             className="mask mask-star-2 bg-amber-300"
-            checked
+            checked={onchange}
           />
         </div>
-        <div className="font-serif">
+        <div className="font-serif mb-1">
           <del>$1020</del> from
           <span className="text-pink-500 font-bold text-lg"> $796</span>{" "}
           <span className="text-red-600 bg-red-200 px-2 py-1 rounded-l-2xl rounded-r-sm font-thin border-0">
@@ -49,8 +49,11 @@ const ProductCard = (product) => {
           </span>
         </div>
 
-        <div className="card-actions w-full pr-3 py-3">
-          <button className="btn w-full rounded-3xl text-[#FF4E16] bg-white">
+        <div className="card-actions w-full py-3 flex">
+          <button className="btn btn-sm rounded-3xl text-[#FF4E16] bg-white">
+            Show more
+          </button>
+          <button className="btn btn-sm rounded-3xl text-[#FF4E16] bg-white">
             Add To Cart
           </button>
         </div>
