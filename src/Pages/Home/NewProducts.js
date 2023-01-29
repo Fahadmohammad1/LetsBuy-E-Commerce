@@ -54,7 +54,7 @@ const NewProducts = () => {
       </h2>
       <hr className="mb-10" />
       <Slider {...settings}>
-        {products.map((product) => (
+        {products?.map((product) => (
           <ProductCard key={product.key} product={product} />
         ))}
       </Slider>
