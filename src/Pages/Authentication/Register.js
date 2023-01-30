@@ -1,14 +1,22 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import {
+  useAuthState,
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import auth from "../../firebase/firebase.init";
+import addUserToDB from "../../redux/thunk/user/saveUser";
 import Loading from "../../Shared/Loading";
 
 const Register = () => {
+  const [userName, setUserName] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
@@ -16,24 +24,34 @@ const Register = () => {
     reset,
   } = useForm();
 
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword, eUser, eLoading, eError] =
     useCreateUserWithEmailAndPassword(auth);
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-  if (loading || updating) {
+  useEffect(() => {
+    const userInfo = {
+      email: user?.email,
+      name: userName || user?.displayName,
+    };
+    console.log(userInfo);
+    dispatch(addUserToDB(userInfo));
+    updateProfile({ displayName: userName });
+  }, [user, dispatch, userName, updateProfile]);
+
+  if (eLoading || updating || loading) {
     return <Loading />;
   }
 
   const handleRegister = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
+    setUserName(data.name);
 
-    if (user) {
-      await updateProfile({ displayName: data.name });
-    }
     reset();
   };
-  console.log(user, error, updateError, errors);
+
+  console.log(eUser, eError, updateError, errors);
+  console.log(user);
   return (
     <div>
       <div class="relative flex h-full w-full">

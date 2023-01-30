@@ -1,7 +1,10 @@
+import { addUser } from "../../actions/userActions";
+
 const addUserToDB = (user) => {
-  return async () => {
+  console.log(user);
+  return async (dispatch, getState) => {
     const res = await fetch("http://localhost:5000/user/v1/user", {
-      method: "PUT",
+      method: "POST",
       body: JSON.stringify(user),
       headers: {
         "Content-type": "application/json",
@@ -9,6 +12,9 @@ const addUserToDB = (user) => {
     });
     const data = await res.json();
     console.log(data);
+    if (data.success) {
+      dispatch(addUser(user));
+    }
   };
 };
 
