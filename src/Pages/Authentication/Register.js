@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import {
   useAuthState,
   useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
@@ -24,6 +25,8 @@ const Register = () => {
     reset,
   } = useForm();
 
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
   const [createUserWithEmailAndPassword, eUser, eLoading, eError] =
     useCreateUserWithEmailAndPassword(auth);
 
@@ -35,11 +38,13 @@ const Register = () => {
       name: userName || user?.displayName,
     };
     console.log(userInfo);
-    dispatch(addUserToDB(userInfo));
+    if (user) {
+      dispatch(addUserToDB(userInfo));
+    }
     updateProfile({ displayName: userName });
   }, [user, dispatch, userName, updateProfile]);
 
-  if (eLoading || updating || loading) {
+  if (eLoading || updating || loading || gLoading) {
     return <Loading />;
   }
 
@@ -67,7 +72,10 @@ const Register = () => {
               </p>
             </div>
             <div class="my-6">
-              <button class="flex w-full justify-center rounded-3xl border-none bg-white p-1 text-black hover:bg-gray-200 sm:p-2">
+              <button
+                onClick={() => signInWithGoogle()}
+                class="flex w-full justify-center rounded-3xl border-none bg-white p-1 text-black hover:bg-gray-200 sm:p-2"
+              >
                 <img
                   src="https://freesvg.org/img/1534129544.png"
                   alt=""
