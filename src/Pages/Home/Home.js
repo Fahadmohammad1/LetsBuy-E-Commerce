@@ -8,7 +8,7 @@ import PopularProducts from "./PopularProducts";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase/firebase.init";
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+
 import addUserToDB from "../../redux/thunk/user/saveUser";
 
 const Home = () => {

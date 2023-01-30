@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { Provider } from "react-redux";
 import { RouterProvider } from "react-router-dom";
 import store from "./redux/store";
@@ -9,6 +10,7 @@ function App() {
       <Provider store={store}>
         <RouterProvider router={routes}></RouterProvider>
       </Provider>
+      <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 }

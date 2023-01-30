@@ -6,9 +6,9 @@ import Loading from "./Loading";
 import { toast } from "react-hot-toast";
 
 const Header = () => {
-  const [user, loading, error] = useAuthState(auth);
-  const [signOut] = useSignOut(auth);
-  if (loading) {
+  const [user, userLoading, userError] = useAuthState(auth);
+  const [signOut, loading, error] = useSignOut(auth);
+  if (userLoading || loading) {
     <Loading />;
   }
   const navigate = useNavigate();
@@ -108,14 +108,12 @@ const Header = () => {
         <div className="navbar-end">
           {user?.uid ? (
             <button
-              onClick={() => {
-                signOut(auth)
-                  .then(() => {
-                    toast.success("Successfully Logged out");
-                  })
-                  .catch((error) => {
-                    console.log(error);
-                  });
+              onClick={async () => {
+                const success = await signOut();
+                if (success) {
+                  toast.success("You are sign out");
+                  navigate("/");
+                }
               }}
               class="btn btn-sm text-[#FF4E16] bg-white"
             >
