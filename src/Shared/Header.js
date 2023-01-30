@@ -8,8 +8,12 @@ import { toast } from "react-hot-toast";
 const Header = () => {
   const [user, userLoading, userError] = useAuthState(auth);
   const [signOut, loading, error] = useSignOut(auth);
+
   if (userLoading || loading) {
     <Loading />;
+  }
+  if (userError || error) {
+    toast.error(userError, error);
   }
   const navigate = useNavigate();
   return (

@@ -1,11 +1,28 @@
 import React from "react";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase/firebase.init";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const Login = () => {
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  console.log(user, loading, error);
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const [signInWithEmailAndPassword, eUser, eLoading, eError] =
+    useSignInWithEmailAndPassword(auth);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const handleRegister = async (data) => {
+    await signInWithEmailAndPassword(data.email, data.password);
+    reset();
+  };
   return (
     <div>
       <div class="relative flex h-full w-full">
@@ -41,12 +58,13 @@ const Login = () => {
               </fieldset>
             </div>
             <div class="mt-10">
-              <form>
+              <form onSubmit={handleSubmit(handleRegister)}>
                 <div>
                   <label class="mb-2.5 block font-extrabold" for="email">
                     Email
                   </label>
                   <input
+                    {...register("email", { required: true })}
                     type="email"
                     id="email"
                     class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30"
@@ -58,6 +76,7 @@ const Login = () => {
                     Password
                   </label>
                   <input
+                    {...register("password", { required: true })}
                     type="password"
                     id="password"
                     class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow"
