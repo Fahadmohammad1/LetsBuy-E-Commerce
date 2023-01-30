@@ -1,7 +1,7 @@
 const addUserToDB = (user) => {
   return async () => {
     const res = await fetch("http://localhost:5000/user/v1/user", {
-      method: "POST",
+      method: "PUT",
       body: JSON.stringify(user),
       headers: {
         "Content-type": "application/json",

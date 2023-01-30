@@ -1,11 +1,13 @@
 import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../firebase/firebase.init";
 import Loading from "./Loading";
+import { toast } from "react-hot-toast";
 
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
+  const [signOut] = useSignOut(auth);
   if (loading) {
     <Loading />;
   }
@@ -106,7 +108,15 @@ const Header = () => {
         <div className="navbar-end">
           {user?.uid ? (
             <button
-              onClick={() => navigate("/")}
+              onClick={() => {
+                signOut(auth)
+                  .then(() => {
+                    toast.success("Successfully Logged out");
+                  })
+                  .catch((error) => {
+                    console.log(error);
+                  });
+              }}
               class="btn btn-sm text-[#FF4E16] bg-white"
             >
               LOGOUT
