@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import ProductCard from "../../Components/ProductCard";
 
 const NewProducts = () => {
-  const products = useSelector((state) => state.products);
+  const products = useSelector((state) => state?.product?.products);
   const dispatch = useDispatch();
 
   useEffect(() => {
