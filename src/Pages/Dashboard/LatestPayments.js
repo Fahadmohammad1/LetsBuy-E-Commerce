@@ -2,7 +2,7 @@ import React from "react";
 
 const LatestPayments = () => {
   return (
-    <section className="">
+    <section className="pt-4">
       <div>
         <div class="flex overflow-hidden bg-white">
           <div
@@ -11,8 +11,8 @@ const LatestPayments = () => {
           >
             <div>
               <div class="px-4">
-                <div class="w-full grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
-                  <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:px-8 ">
+                <div class="w-full">
+                  <div class="bg-white shadow-sm rounded-lg p-4 xl:px-8 ">
                     <div class="mb-4 flex items-center justify-between">
                       <div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">
@@ -153,18 +153,6 @@ const LatestPayments = () => {
                             </table>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
-                    <div class="flex items-center justify-between mb-4">
-                      <div class="flex-shrink-0">
-                        <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">
-                          $45,385
-                        </span>
-                        <h3 class="text-base font-normal text-gray-500">
-                          Sales this week
-                        </h3>
                       </div>
                     </div>
                   </div>

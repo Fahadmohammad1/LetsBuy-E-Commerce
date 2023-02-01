@@ -12,11 +12,11 @@ const AllUsers = () => {
     dispatch(LoadAllUsers());
   }, [dispatch]);
   return (
-    <section className="w-full">
+    <section className="w-full pt-4">
       <ul>
         {users.map((user) => (
-          <li className="my-2">
-            <div class="flex w-1/3 items-center space-x-4">
+          <li className="my-4">
+            <div class="flex w-1/2 items-center space-x-4">
               <div class="flex-shrink-0">
                 <img
                   class="h-8 w-8 rounded-full"

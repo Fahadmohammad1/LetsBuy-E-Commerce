@@ -8,7 +8,7 @@ const DashboardLayout = () => {
       <Header />
       <div className="drawer drawer-mobile container mx-auto">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex">
+        <div className="drawer-content flex pl-6">
           <Outlet />
           <label
             htmlFor="my-drawer-2"
@@ -17,7 +17,7 @@ const DashboardLayout = () => {
             Open drawer
           </label>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side shadow-2xl">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 bg-base-100 text-base-content">
             <li>
