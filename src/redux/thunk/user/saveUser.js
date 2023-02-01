@@ -11,10 +11,11 @@ const addUserToDB = (user) => {
       body: JSON.stringify(user),
     });
     const data = await res.json();
-
+    console.log(data);
     if (data.success) {
       dispatch(addUser(user));
     }
+    localStorage.setItem("accessToken2", data.accesToken);
   };
 };
 

@@ -18,7 +18,7 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <nav className="sticky top-0 z-40 bg-white mb-4">
-      <div className="navbar container mx-auto">
+      <div className="navbar container mx-auto border-b-2 border-[#FF4E16]">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
