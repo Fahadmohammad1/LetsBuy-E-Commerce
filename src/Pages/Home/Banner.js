@@ -58,7 +58,7 @@ const Banner = () => {
                       to waste time in front of tv.
                     </p>
                     <h1 class="text-pink-500">$1200</h1>
-                    <div class="btn bg-[#FF4E16]">Buy Now</div>
+                    <div class="btn bg-primary">Buy Now</div>
                   </div>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const Banner = () => {
                       to waste time in front of tv.
                     </p>
                     <h1 class="text-pink-500">$1200</h1>
-                    <div class="btn bg-[#FF4E16]">Buy Now</div>
+                    <div class="btn bg-primary">Buy Now</div>
                   </div>
                 </div>
               </div>

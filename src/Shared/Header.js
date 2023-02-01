@@ -18,7 +18,7 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <nav className="sticky top-0 z-40 bg-white mb-4">
-      <div className="navbar container mx-auto border-b-2 border-[#FF4E16]">
+      <div className="navbar container mx-auto border-b-2 border-primary">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -73,8 +73,8 @@ const Header = () => {
           </div>
           <Link to="/" class="text-2xl font-bold">
             {" "}
-            <span className="text-[#FF4E16]">L</span>ets
-            <span className="text-[#FF4E16]">B</span>uy
+            <span className="text-primary">L</span>ets
+            <span className="text-primary">B</span>uy
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -119,14 +119,14 @@ const Header = () => {
                   navigate("/");
                 }
               }}
-              class="btn btn-sm text-[#FF4E16] bg-white"
+              class="btn btn-sm text-primary bg-white"
             >
               LOGOUT
             </button>
           ) : (
             <button
               onClick={() => navigate("/login")}
-              class="btn btn-sm text-[#FF4E16] bg-white"
+              class="btn btn-sm text-primary bg-white"
             >
               LOGIN
             </button>

@@ -8,7 +8,7 @@ const DiscountBanner = () => {
       data-aos-duration="1000"
       className="container mx-auto mt-16"
     >
-      <div class="p-6 py-12 bg-pink-500 text-gray-900 rounded-full">
+      <div class="p-6 py-12 bg-secondary text-gray-900 rounded-full">
         <div class="container mx-auto">
           <div class="flex flex-col lg:flex-row items-center justify-between">
             <h2 class="text-center text-6xl tracking-tighter font-bold">
@@ -22,7 +22,7 @@ const DiscountBanner = () => {
             <a
               href="."
               rel="noreferrer noopener"
-              class="px-5 mt-4 lg:mt-0 py-3 rounded-md border block dark:bg-[#FF4E16] dark:text-white font-bold dark:border-gray-400"
+              class="px-5 mt-4 lg:mt-0 py-3 rounded-md border block dark:bg-primary dark:text-white font-bold dark:border-gray-400"
             >
               Shop Now
             </a>

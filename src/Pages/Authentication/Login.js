@@ -97,7 +97,7 @@ const Login = () => {
                   </div>
                 </div>
                 <div class="my-10">
-                  <button class="w-full rounded-full bg-[#FF4E16] p-5 hover:bg-orange-800 font-bold">
+                  <button class="w-full rounded-full bg-primary p-5 hover:bg-orange-800 font-bold">
                     SIGN IN
                   </button>
                 </div>

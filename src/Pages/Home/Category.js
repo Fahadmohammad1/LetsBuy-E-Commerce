@@ -39,7 +39,7 @@ const Category = () => {
   };
   return (
     <div className="container mx-auto">
-      <h2 className="mt-10 font-bold text-3xl text-gray-800 inline-block border-b-2 border-[#FF4E16] pb-1">
+      <h2 className="mt-10 font-bold text-3xl text-gray-800 inline-block border-b-2 border-primary pb-1">
         Categories
       </h2>
       <hr className="mb-10" />

@@ -7,7 +7,7 @@ const Gallery = () => {
   const [isHoveringFour, setIsHoveringFour] = useState(false);
   return (
     <div className="container mx-auto mt-10">
-      <h2 className="font-bold text-3xl border-b-2 border-[#FF4E16] inline-block text-gray-800">
+      <h2 className="font-bold text-3xl border-b-2 border-primary inline-block text-gray-800">
         New Collection
       </h2>
       <hr />

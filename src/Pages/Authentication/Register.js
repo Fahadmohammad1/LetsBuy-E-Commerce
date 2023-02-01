@@ -143,7 +143,7 @@ const Register = () => {
                   </div>
                 </div>
                 <div class="my-7">
-                  <button class="w-full rounded-full bg-[#FF4E16] px-5 py-3 hover:bg-orange-800">
+                  <button class="w-full rounded-full bg-primary px-5 py-3 hover:bg-orange-800">
                     SIGN UP
                   </button>
                 </div>

@@ -50,10 +50,10 @@ const ProductCard = (product) => {
         </div>
 
         <div className="card-actions w-full py-3 flex">
-          <button className="btn btn-sm rounded-3xl text-[#FF4E16] bg-white">
+          <button className="btn btn-sm rounded-3xl text-primary bg-white">
             Show more
           </button>
-          <button className="btn btn-sm rounded-3xl text-[#FF4E16] bg-white">
+          <button className="btn btn-sm rounded-3xl text-primary bg-white">
             Add To Cart
           </button>
         </div>
