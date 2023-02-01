@@ -5,6 +5,7 @@ import About from "../../Pages/About/About";
 import Login from "../../Pages/Authentication/Login";
 import Register from "../../Pages/Authentication/Register";
 import AllUsers from "../../Pages/Dashboard/AllUsers";
+import LatestPayments from "../../Pages/Dashboard/LatestPayments";
 import MyProfile from "../../Pages/Dashboard/MyProfile";
 import Home from "../../Pages/Home/Home";
 
@@ -40,8 +41,12 @@ export const routes = createBrowserRouter([
         element: <MyProfile />,
       },
       {
-        path: "/dashboard/allUsers",
+        path: "/dashboard/all-users",
         element: <AllUsers />,
+      },
+      {
+        path: "/dashboard/latest-payments",
+        element: <LatestPayments />,
       },
     ],
   },

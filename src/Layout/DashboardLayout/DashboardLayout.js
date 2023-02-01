@@ -6,7 +6,7 @@ const DashboardLayout = () => {
   return (
     <section>
       <Header />
-      <div className="drawer drawer-mobile">
+      <div className="drawer drawer-mobile container mx-auto">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">
           <Outlet />
@@ -24,7 +24,10 @@ const DashboardLayout = () => {
               <Link to="/dashboard">My Profile</Link>
             </li>
             <li>
-              <Link to="/dashboard/allUsers">All User</Link>
+              <Link to="/dashboard/all-users">All User</Link>
+            </li>
+            <li>
+              <Link to="/dashboard/latest-payments">Latest Transactions</Link>
             </li>
           </ul>
         </div>
