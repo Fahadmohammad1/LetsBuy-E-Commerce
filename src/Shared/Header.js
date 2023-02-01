@@ -116,6 +116,7 @@ const Header = () => {
                 const success = await signOut();
                 if (success) {
                   toast.success("You are sign out");
+                  localStorage.removeItem("accessToken2");
                   navigate("/");
                 }
               }}

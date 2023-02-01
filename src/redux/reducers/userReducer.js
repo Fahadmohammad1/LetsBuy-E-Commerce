@@ -1,15 +1,15 @@
-import { ADD_USER } from "../actionTypes/actionTypes";
+import { LOAD_USERS } from "../actionTypes/actionTypes";
 
 const initialState = {
-  user: [],
+  users: [],
 };
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_USER:
+    case LOAD_USERS:
       return {
         ...state,
-        user: action.payload,
+        users: action.payload,
       };
 
     default:
