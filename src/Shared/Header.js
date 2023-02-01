@@ -42,7 +42,7 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="">Dashboard</Link>
+                <Link to="/dashboard">Dashboard</Link>
               </li>
               <li tabIndex={0}>
                 <Link to="" className="justify-between">
@@ -71,16 +71,16 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a href="/" class="text-2xl font-bold">
+          <Link to="/" class="text-2xl font-bold">
             {" "}
             <span className="text-[#FF4E16]">L</span>ets
             <span className="text-[#FF4E16]">B</span>uy
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to="">Dashboard</Link>
+              <Link to="/dashboard">Dashboard</Link>
             </li>
             <li tabIndex={0}>
               <Link to="">
