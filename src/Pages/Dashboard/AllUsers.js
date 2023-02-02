@@ -15,7 +15,7 @@ const AllUsers = () => {
     <section className="w-full pt-4">
       <ul>
         {users.map((user) => (
-          <li className="my-4">
+          <li className="my-4" key={user._id}>
             <div class="flex w-1/2 items-center space-x-4">
               <div class="flex-shrink-0">
                 <img

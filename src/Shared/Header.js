@@ -120,14 +120,14 @@ const Header = () => {
                   navigate("/");
                 }
               }}
-              class="btn btn-sm text-primary bg-white"
+              class="btn btn-sm text-primary bg-white hover:text-black"
             >
               LOGOUT
             </button>
           ) : (
             <button
               onClick={() => navigate("/login")}
-              class="btn btn-sm text-primary bg-white"
+              class="btn btn-sm text-primary bg-white hover:text-black"
             >
               LOGIN
             </button>

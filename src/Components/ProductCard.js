@@ -43,7 +43,7 @@ const ProductCard = (product) => {
         </div>
         <div className="font-serif mb-1">
           <del>$1020</del> from
-          <span className="text-pink-500 font-bold text-lg"> $796</span>{" "}
+          <span className="text-secondary font-bold text-lg"> $796</span>{" "}
           <span className="text-red-600 bg-red-200 px-2 py-1 rounded-l-2xl rounded-r-sm font-thin border-0">
             -20%
           </span>
