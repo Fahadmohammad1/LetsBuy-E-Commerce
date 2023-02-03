@@ -11,7 +11,11 @@ const AllUsers = () => {
 
   useEffect(() => {
     dispatch(LoadAllUsers());
-  }, [dispatch, users]);
+  }, [dispatch]);
+
+  const handleMakeAdmin = (user) => {
+    dispatch(makeAdmin(user));
+  };
 
   return (
     <section className="w-full pt-4">
@@ -46,7 +50,7 @@ const AllUsers = () => {
               <div>
                 {user.role !== "admin" && (
                   <button
-                    onClick={() => dispatch(makeAdmin(user))}
+                    onClick={() => handleMakeAdmin(user)}
                     className="btn btn-xs mx-4 text-white"
                   >
                     Make Admin

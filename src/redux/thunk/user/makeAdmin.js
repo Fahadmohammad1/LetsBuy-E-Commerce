@@ -1,3 +1,4 @@
+import { toast } from "react-hot-toast";
 import { addUser } from "../../actions/userActions";
 
 const makeAdmin = (user) => {
@@ -7,7 +8,7 @@ const makeAdmin = (user) => {
       {
         method: "PUT",
         headers: {
-          "Content-type": "application/json",
+          authorization: `bearer ${localStorage.getItem("accessToken2")}`,
         },
       }
     );
@@ -15,6 +16,9 @@ const makeAdmin = (user) => {
     console.log(res);
     if (res.success) {
       dispatch(addUser(user));
+      toast.success("Make admin successful");
+    } else {
+      toast.error("Make admin failed");
     }
   };
 };

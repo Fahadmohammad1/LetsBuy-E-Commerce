@@ -8,7 +8,6 @@ const LoadAllUsers = () => {
       },
     });
     const data = await res.json();
-    console.log(data);
 
     if (data.length) {
       dispatch(loadUser(data));
