@@ -1,4 +1,4 @@
-import { LOAD_USERS } from "../actionTypes/actionTypes";
+import { ADD_USER, LOAD_USERS } from "../actionTypes/actionTypes";
 
 const initialState = {
   users: [],
@@ -10,6 +10,10 @@ const userReducer = (state = initialState, action) => {
       return {
         ...state,
         users: action.payload,
+      };
+    case ADD_USER:
+      return {
+        ...state,
       };
 
     default:
