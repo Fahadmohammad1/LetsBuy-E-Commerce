@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
+  useAuthState,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase/firebase.init";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import addUserToDB from "../../redux/thunk/user/saveUser";
+import { useState } from "react";
+import Loading from "../../Shared/Loading";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const dispatch = useDispatch();
+  const [user, loading, error] = useAuthState(auth);
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, eUser, eLoading, eError] =
     useSignInWithEmailAndPassword(auth);
@@ -19,9 +27,25 @@ const Login = () => {
     reset,
   } = useForm();
 
+  useEffect(() => {
+    const userInfo = {
+      email: email,
+      name: user?.displayName,
+    };
+    console.log(userInfo);
+    if (user) {
+      dispatch(addUserToDB(userInfo));
+    }
+  }, [user, dispatch, email]);
+
+  if (loading || gLoading || eLoading) {
+    <Loading />;
+  }
+
   const handleRegister = async (data) => {
     await signInWithEmailAndPassword(data.email, data.password);
     reset();
+    setEmail(data.email);
   };
   return (
     <div>

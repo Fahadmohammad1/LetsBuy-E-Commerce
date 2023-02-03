@@ -13,10 +13,6 @@ const AllUsers = () => {
     dispatch(LoadAllUsers());
   }, [dispatch]);
 
-  const handleMakeAdmin = (user) => {
-    dispatch(makeAdmin(user));
-  };
-
   return (
     <section className="w-full pt-4">
       <ul>
@@ -48,12 +44,16 @@ const AllUsers = () => {
                 $320
               </div>
               <div>
-                {user.role !== "admin" && (
+                {user.role !== "admin" ? (
                   <button
-                    onClick={() => handleMakeAdmin(user)}
+                    onClick={() => dispatch(makeAdmin(user))}
                     className="btn btn-xs mx-4 text-white"
                   >
                     Make Admin
+                  </button>
+                ) : (
+                  <button className="btn btn-xs mx-4 bg-red-500 text-white">
+                    Remove admin
                   </button>
                 )}
                 <button className="btn btn-xs mx-4 bg-red-500 text-white">
