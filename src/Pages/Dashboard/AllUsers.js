@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import LoadAllUsers from "../../redux/thunk/user/fetchUsers";
+import makeAdmin from "../../redux/thunk/user/makeAdmin";
 
 const AllUsers = () => {
   const dispatch = useDispatch();
@@ -10,13 +11,14 @@ const AllUsers = () => {
 
   useEffect(() => {
     dispatch(LoadAllUsers());
-  }, [dispatch]);
+  }, [dispatch, users]);
+
   return (
     <section className="w-full pt-4">
       <ul>
         {users.map((user) => (
           <li className="my-4" key={user._id}>
-            <div class="flex w-1/2 items-center space-x-4">
+            <div class="flex w-3/4 items-center space-x-4">
               <div class="flex-shrink-0">
                 <img
                   class="h-8 w-8 rounded-full"
@@ -40,6 +42,19 @@ const AllUsers = () => {
               </div>
               <div class="inline-flex items-center text-base font-semibold text-gray-900">
                 $320
+              </div>
+              <div>
+                {user.role !== "admin" && (
+                  <button
+                    onClick={() => dispatch(makeAdmin(user))}
+                    className="btn btn-xs mx-4 text-white"
+                  >
+                    Make Admin
+                  </button>
+                )}
+                <button className="btn btn-xs mx-4 bg-red-500 text-white">
+                  Delete
+                </button>
               </div>
             </div>
           </li>
