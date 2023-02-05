@@ -1,5 +1,3 @@
-import { addUser } from "../../actions/userActions";
-
 const addUserToDB = (user) => {
   console.log(user);
   return async (dispatch, getState) => {
@@ -13,12 +11,7 @@ const addUserToDB = (user) => {
     const data = await res.json();
     console.log(data);
     if (data.success) {
-      dispatch(
-        addUser({
-          _id: data.insertedId,
-          ...user,
-        })
-      );
+      dispatch();
     }
     localStorage.setItem("accessToken2", data.accesToken);
   };
