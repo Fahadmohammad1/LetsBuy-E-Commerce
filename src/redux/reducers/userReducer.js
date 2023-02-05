@@ -12,13 +12,12 @@ const userReducer = (state = initialState, action) => {
         users: action.payload,
       };
     case ADD_ROLE:
-      const availableUser = state.users.filter(
+      const filterUser = state.users.filter(
         (user) => action.payload._id !== user._id
       );
-      console.log(availableUser);
       return {
         ...state,
-        users: [...availableUser, action.payload],
+        users: [action.payload, ...filterUser],
       };
 
     default:
