@@ -1,4 +1,5 @@
 import { toast } from "react-hot-toast";
+import { addAdminRole } from "../../actions/userActions";
 
 const makeAdmin = (user) => {
   return async (dispatch, getState) => {
@@ -14,6 +15,12 @@ const makeAdmin = (user) => {
     const res = await data.json();
     console.log(res);
     if (res.success) {
+      dispatch(
+        addAdminRole({
+          ...user,
+          role: "admin",
+        })
+      );
       toast.success("Make admin successful");
     } else {
       toast.error("Make admin failed");

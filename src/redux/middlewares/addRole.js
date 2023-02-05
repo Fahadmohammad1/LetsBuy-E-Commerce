@@ -1,20 +1,15 @@
-import { ADD_ROLE } from "../actionTypes/actionTypes";
+// import { ADD_ROLE } from "../actionTypes/actionTypes";
 
-const addRole = (store) => (next) => (action) => {
-  const state = store.getState();
+// const addRole = (store) => (next) => (action) => {
+//   if (action?.type === ADD_ROLE) {
+//     const newRoleAction = {
+//       ...action,
+//       payload: { ...action.payload, role: "admin" },
+//     };
+//     return next(newRoleAction);
+//   }
 
-  const user = state?.user?.users;
-  console.log(user);
+//   return next(action);
+// };
 
-  if (action.type === ADD_ROLE) {
-    const newRoleAction = {
-      ...action,
-      payload: { ...action.payload, role: "admin" },
-    };
-    return next(newRoleAction);
-  }
-
-  return next(action);
-};
-
-export default addRole;
+// export default addRole;
