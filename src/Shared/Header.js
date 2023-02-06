@@ -120,7 +120,7 @@ const Header = () => {
                   navigate("/");
                 }
               }}
-              class="btn btn-sm text-primary bg-white hover:text-black"
+              class="btn btn-sm text-primary bg-white hover:text-white"
             >
               LOGOUT
             </button>

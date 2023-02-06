@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductCardTwo = ({ product }) => {
   return (
-    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+    <div class="w-full max-w-sm bg-white border-gray-200 rounded-lg shadow-md ">
       <a href="/">
         <img class="p-8 rounded-t-lg" src={product.image} alt="product" />
       </a>
@@ -69,12 +69,9 @@ const ProductCardTwo = ({ product }) => {
         </div>
         <div class="flex items-center justify-between">
           <span class="text-3xl font-bold text-gray-900">$599</span>
-          <a
-            href="/"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Add to cart
-          </a>
+          <button className="btn btn-sm rounded-3xl text-primary bg-white hover:text-white">
+            Add To Cart
+          </button>
         </div>
       </div>
     </div>
