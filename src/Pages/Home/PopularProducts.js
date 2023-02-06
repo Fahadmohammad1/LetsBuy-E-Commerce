@@ -9,9 +9,9 @@ const PopularProducts = () => {
       <h2 className="font-bold text-3xl border-b-2 border-primary inline-block text-gray-800">
         Popular
       </h2>
-      <hr />
-      <div className="grid md:grid-cols-4">
-        {products.map((product) => (
+      <hr className="mb-10" />
+      <div className="grid md:grid-cols-5 gap-5">
+        {products?.slice(0, 5).map((product) => (
           <ProductCardTwo key={product.key} product={product} />
         ))}
       </div>
