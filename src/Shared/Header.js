@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../firebase/firebase.init";
 import Loading from "./Loading";
 import { toast } from "react-hot-toast";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Header = () => {
   const [user, userLoading, userError] = useAuthState(auth);
@@ -110,6 +111,9 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
+          <button className="mx-5">
+            <AiOutlineShoppingCart className="text-3xl" />
+          </button>
           {user?.uid ? (
             <button
               onClick={async () => {
