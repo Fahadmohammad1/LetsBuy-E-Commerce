@@ -111,9 +111,9 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="mx-5">
+          <Link to="/cart" className="mx-5">
             <AiOutlineShoppingCart className="text-3xl" />
-          </button>
+          </Link>
           {user?.uid ? (
             <button
               onClick={async () => {

@@ -4,6 +4,7 @@ import Main from "../../Layout/Main/Main";
 import About from "../../Pages/About/About";
 import Login from "../../Pages/Authentication/Login";
 import Register from "../../Pages/Authentication/Register";
+import Cart from "../../Pages/cart/Cart";
 import AllUsers from "../../Pages/Dashboard/AllUsers";
 import LatestPayments from "../../Pages/Dashboard/LatestPayments";
 import MyProfile from "../../Pages/Dashboard/MyProfile";
@@ -29,6 +30,10 @@ export const routes = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
