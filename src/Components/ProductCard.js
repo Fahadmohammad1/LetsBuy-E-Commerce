@@ -7,20 +7,28 @@ import { RiDeleteBin2Fill } from "react-icons/ri";
 import image from "../Assets/images/banner/cardwatch (1).png";
 
 const ProductCard = (product) => {
-  const { name, brand } = product.product;
+  const { name, brand, category, price } = product.product;
   const { pathname } = useLocation();
   const dispatch = useDispatch();
   return (
     <div className="card w-auto relative rounded-none">
-      <span className="badge absolute right-3 top-0 uppercase bg-red-200 text-red-600 border-0">
-        sale
-      </span>
+      {pathname !== "/cart" ? (
+        <span className="badge absolute right-3 top-0 uppercase bg-red-200 text-red-600 border-0">
+          sale
+        </span>
+      ) : (
+        <span className="badge absolute right-3 top-0 uppercase bg-neutral text-white border-0 font-bold">
+          1
+        </span>
+      )}
       <figure className="px-8 pt-8">
         <img src={image} alt="product" className="rounded-xl" />
       </figure>
-      <div className="pt-3 pl-3 lg:pl-8">
-        <h2 className="card-title">M2 Bionic - {brand}</h2>
-        <p className="pb-1">{name} - Computer and Accessories</p>
+      <div className="pt-3 pl-3 lg:pl-2">
+        <h2 className="card-title text-ellipsis">
+          {name} - {brand}
+        </h2>
+        <p className="pb-1">Category - {category}</p>
         <div className="rating rating-xs">
           <input
             type="radio"
@@ -50,8 +58,11 @@ const ProductCard = (product) => {
           />
         </div>
         <div className="font-serif mb-1">
-          <del>$1020</del> from
-          <span className="text-secondary font-bold text-lg"> $796</span>{" "}
+          <del>$1020</del> to
+          <span className="text-secondary font-bold text-lg">
+            {" "}
+            ${price}
+          </span>{" "}
           <span className="text-red-600 bg-red-200 px-2 py-1 rounded-l-2xl rounded-r-sm font-thin border-0 ml-2">
             -20%
           </span>
