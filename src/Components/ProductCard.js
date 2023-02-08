@@ -7,7 +7,7 @@ import { RiDeleteBin2Fill } from "react-icons/ri";
 import image from "../Assets/images/banner/cardwatch (1).png";
 
 const ProductCard = (product) => {
-  const { name, brand, category, price } = product.product;
+  const { name, brand, category, price, quantity } = product.product;
   const { pathname } = useLocation();
   const dispatch = useDispatch();
   return (
@@ -18,7 +18,7 @@ const ProductCard = (product) => {
         </span>
       ) : (
         <span className="badge absolute right-3 top-0 uppercase bg-neutral text-white border-0 font-bold">
-          1
+          {quantity}
         </span>
       )}
       <figure className="px-8 pt-8">
