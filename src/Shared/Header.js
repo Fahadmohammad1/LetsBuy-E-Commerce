@@ -5,10 +5,12 @@ import auth from "../firebase/firebase.init";
 import Loading from "./Loading";
 import { toast } from "react-hot-toast";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [user, userLoading, userError] = useAuthState(auth);
   const [signOut, loading, error] = useSignOut(auth);
+  const cart = useSelector((state) => state?.product?.cart);
 
   if (userLoading || loading) {
     <Loading />;
@@ -111,7 +113,10 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/cart" className="mx-5">
+          <Link to="/cart" className="mx-5 relative">
+            <span className="badge absolute -top-2 -right-4 bg-gray-300 text-red-600 border-0">
+              {cart.length}
+            </span>
             <AiOutlineShoppingCart className="text-3xl" />
           </Link>
           {user?.uid ? (
