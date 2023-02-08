@@ -1,83 +1,92 @@
 [
   {
     "id": 1,
-    "name": "Watch",
-    "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
-    "price": 1200,
+    "name": "Smart Watch",
+    "image": "",
+    "price": 500,
     "rating": 5,
     "description": "This is a test description for the product. This product is a very good product. Everyone should by it",
-    "brand": "Apple"
+    "brand": "Apple",
+    "category": "Watch"
   },
   {
     "id": 2,
-    "name": "Watch",
-    "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
-    "price": 1200,
+    "name": "Galaxy Z Fold",
+    "image": "",
+    "price": 200,
     "rating": 5,
     "description": "This is a test description for the product. This product is a very good product. Everyone should by it",
-    "brand": "Apple"
+    "brand": "Samsung",
+    "category": "Smartphone"
   },
   {
     "id": 3,
-    "name": "Watch",
-    "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
-    "price": 1200,
+    "name": "Nokia Lumia",
+    "image": "",
+    "price": 250,
     "rating": 5,
     "description": "This is a test description for the product. This product is a very good product. Everyone should by it",
-    "brand": "Apple"
+    "brand": "Nokia",
+    "category": "Phone"
   },
   {
     "id": 4,
-    "name": "Watch",
-    "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
-    "price": 1200,
+    "name": "Redmi Note 8",
+    "image": "",
+    "price": 400,
     "rating": 5,
     "description": "This is a test description for the product. This product is a very good product. Everyone should by it",
-    "brand": "Apple"
+    "brand": "Xiaomi",
+    "category": "Smartphone"
   },
   {
     "id": 5,
-    "name": "Watch",
-    "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
-    "price": 1200,
+    "name": "Mate 40 pro",
+    "image": "",
+    "price": 355,
     "rating": 5,
     "description": "This is a test description for the product. This product is a very good product. Everyone should by it",
-    "brand": "Apple"
+    "brand": "Huwawei",
+    "category": "Laptop"
   },
   {
     "id": 6,
-    "name": "Watch",
-    "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
-    "price": 1200,
+    "name": "Zester Pro",
+    "image": "",
+    "price": 250,
     "rating": 5,
     "description": "This is a test description for the product. This product is a very good product. Everyone should by it",
-    "brand": "Apple"
+    "brand": "Walton",
+    "category": "Fan"
   },
   {
     "id": 7,
-    "name": "Watch",
-    "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
-    "price": 1200,
+    "name": "F22 Plus",
+    "image": "",
+    "price": 602,
     "rating": 5,
     "description": "This is a test description for the product. This product is a very good product. Everyone should by it",
-    "brand": "Apple"
+    "brand": "Singer",
+    "category": ""
   },
   {
     "id": 8,
-    "name": "Watch",
-    "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
-    "price": 1200,
+    "name": "Oisac 22p",
+    "image": "",
+    "price": 700,
     "rating": 5,
     "description": "This is a test description for the product. This product is a very good product. Everyone should by it",
-    "brand": "Apple"
+    "brand": "Casio",
+    "category": "Calculator"
   },
   {
     "id": 9,
-    "name": "Watch",
-    "image": "https://www.pngmart.com/files/6/Watch-PNG-Transparent-Image.png",
-    "price": 1200,
+    "name": "Reno 4",
+    "image": "",
+    "price": 550,
     "rating": 5,
     "description": "This is a test description for the product. This product is a very good product. Everyone should by it",
-    "brand": "Apple"
+    "brand": "Oppo",
+    "category": "Smartphone"
   }
 ]

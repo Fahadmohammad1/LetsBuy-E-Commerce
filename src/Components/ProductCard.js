@@ -4,11 +4,11 @@ import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { addToCart } from "../redux/actions/productAction";
 import { RiDeleteBin2Fill } from "react-icons/ri";
+import image from "../Assets/images/banner/cardwatch (1).png";
 
 const ProductCard = (product) => {
-  const { name, image, brand } = product.product;
+  const { name, brand } = product.product;
   const { pathname } = useLocation();
-  console.log(pathname);
   const dispatch = useDispatch();
   return (
     <div className="card w-auto relative rounded-none">
