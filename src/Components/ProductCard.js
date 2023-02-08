@@ -1,10 +1,14 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { addToCart } from "../redux/actions/productAction";
+import { RiDeleteBin2Fill } from "react-icons/ri";
 
 const ProductCard = (product) => {
   const { name, image, brand } = product.product;
+  const { pathname } = useLocation();
+  console.log(pathname);
   const dispatch = useDispatch();
   return (
     <div className="card w-auto relative rounded-none">
@@ -57,12 +61,21 @@ const ProductCard = (product) => {
           <button className="btn btn-sm rounded-3xl text-primary bg-white hover:text-white">
             Quick View
           </button>
-          <button
-            onClick={() => dispatch(addToCart(product.product))}
-            className="btn btn-sm rounded-3xl text-primary bg-white hover:text-white"
-          >
-            <AiOutlineShoppingCart className="text-xl" />
-          </button>
+          {pathname !== "/cart" ? (
+            <button
+              onClick={() => dispatch(addToCart(product.product))}
+              className="btn btn-sm rounded-3xl text-primary bg-white hover:text-white"
+            >
+              <AiOutlineShoppingCart className="text-xl" />
+            </button>
+          ) : (
+            <button
+              onClick={() => dispatch(addToCart(product.product))}
+              className="btn btn-sm rounded-3xl text-red-600 bg-white hover:text-white"
+            >
+              <RiDeleteBin2Fill className="text-xl" />
+            </button>
+          )}
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import ProductCardTwo from "../../Components/ProductCardTwo";
+import ProductCard from "../../Components/ProductCard";
 
 const PopularProducts = () => {
   const products = useSelector((state) => state?.product?.products);
@@ -12,7 +12,7 @@ const PopularProducts = () => {
       <hr className="mb-10" />
       <div className="grid md:grid-cols-5 gap-5">
         {products?.slice(0, 5).map((product) => (
-          <ProductCardTwo key={product.key} product={product} />
+          <ProductCard key={product.key} product={product} />
         ))}
       </div>
     </section>
