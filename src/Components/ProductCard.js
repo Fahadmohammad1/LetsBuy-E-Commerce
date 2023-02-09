@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import { addToCart } from "../redux/actions/productAction";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import image from "../Assets/images/banner/cardwatch (1).png";
+import addCartToDb from "../redux/thunk/products/addCartToDb";
 
 const ProductCard = (product) => {
   const { name, brand, category, price, quantity } = product.product;
@@ -74,7 +75,7 @@ const ProductCard = (product) => {
           </button>
           {pathname !== "/cart" ? (
             <button
-              onClick={() => dispatch(addToCart(product.product))}
+              onClick={() => dispatch(addCartToDb(product.product))}
               className="btn btn-sm rounded-3xl text-primary bg-white hover:text-white"
             >
               <AiOutlineShoppingCart className="text-xl" />

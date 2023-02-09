@@ -114,7 +114,7 @@ const Header = () => {
         </div>
         <div className="navbar-end">
           <Link to="/cart" className="mx-5 relative">
-            <span className="badge absolute -top-2 -right-4 bg-gray-300 text-red-600 border-0">
+            <span className="badge absolute -top-2 -right-4 text-white border-0">
               {cart.length}
             </span>
             <AiOutlineShoppingCart className="text-3xl" />
