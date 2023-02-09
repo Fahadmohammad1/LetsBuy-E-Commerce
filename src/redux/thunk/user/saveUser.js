@@ -1,5 +1,4 @@
 const addUserToDB = (user) => {
-  console.log(user);
   return async (dispatch, getState) => {
     const res = await fetch("http://localhost:5000/user/v1/user", {
       method: "POST",
