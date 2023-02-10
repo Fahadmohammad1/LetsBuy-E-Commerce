@@ -2,15 +2,22 @@ import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { addToCart } from "../redux/actions/productAction";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import image from "../Assets/images/banner/cardwatch (1).png";
 import addCartToDb from "../redux/thunk/products/addCartToDb";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../firebase/firebase.init";
+import Loading from "../Shared/Loading";
 
 const ProductCard = (product) => {
   const { name, brand, category, price, quantity } = product.product;
   const { pathname } = useLocation();
+  const [user, loading, error] = useAuthState(auth);
   const dispatch = useDispatch();
+
+  if (loading) {
+    <Loading />;
+  }
   return (
     <div className="card w-auto relative rounded-none">
       {pathname !== "/cart" ? (
@@ -75,16 +82,13 @@ const ProductCard = (product) => {
           </button>
           {pathname !== "/cart" ? (
             <button
-              onClick={() => dispatch(addCartToDb(product.product))}
+              onClick={() => dispatch(addCartToDb(product.product, user.email))}
               className="btn btn-sm rounded-3xl text-primary bg-white hover:text-white"
             >
               <AiOutlineShoppingCart className="text-xl" />
             </button>
           ) : (
-            <button
-              onClick={() => dispatch(addToCart(product.product))}
-              className="btn btn-sm rounded-3xl text-red-600 bg-white hover:text-white"
-            >
+            <button className="btn btn-sm rounded-3xl text-red-600 bg-white hover:text-white">
               <RiDeleteBin2Fill className="text-xl" />
             </button>
           )}
