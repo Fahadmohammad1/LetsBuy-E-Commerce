@@ -4,7 +4,7 @@ import { addToCart } from "../../actions/productAction";
 const addCartToDb = (product, email) => {
   return async (dispatch, getState) => {
     const cartItem = { ...product, email: email };
-    const res = await fetch("http://localhost:5000/v1/cart-item", {
+    const res = await fetch(`http://localhost:5000/v1/cart-item/${email}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
