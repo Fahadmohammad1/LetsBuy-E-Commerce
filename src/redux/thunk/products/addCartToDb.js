@@ -21,6 +21,9 @@ const addCartToDb = (product, email) => {
         })
       );
       toast.success(data.message);
+    } else {
+      dispatch(addToCart(product));
+      toast.success("Quantity Increased");
     }
 
     console.log(data);

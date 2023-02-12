@@ -22,7 +22,7 @@ const productReducer = (state = initialState, action) => {
           (product) => product._id !== selectedProduct._id
         );
 
-        selectedProduct.quantity += 1;
+        selectedProduct.quantity = selectedProduct.quantity + 1;
 
         return {
           ...state,
