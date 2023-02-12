@@ -22,7 +22,7 @@ const Header = () => {
 
   window.onscroll = function () {
     const navbar = document.querySelector("nav");
-    if (window.pageYOffset > 200) {
+    if (window.pageYOffset > 100) {
       navbar.classList.remove("bg-transparent");
       navbar.classList.add("bg-white");
     } else {
@@ -92,13 +92,13 @@ const Header = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 text-gray-700 text-sm font-bold uppercase">
             <li>
               <Link to="/dashboard">Dashboard</Link>
             </li>
             <li tabIndex={0}>
               <Link to="">
-                Parent
+                Shop
                 <svg
                   className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <Link to="">Item 3</Link>
+              <Link to="">Contact</Link>
             </li>
           </ul>
         </div>

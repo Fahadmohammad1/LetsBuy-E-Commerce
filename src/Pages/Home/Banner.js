@@ -1,8 +1,4 @@
 import React from "react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-// import "./BannerStyle.css";
 import bag from "../../Assets/images/banner/bag.jpg";
 import watch from "../../Assets/images/banner/watch.jpg";
 import shoes from "../../Assets/images/banner/shoes.jpg";
@@ -15,7 +11,11 @@ const Banner = () => {
   return (
     <div className="">
       <div className="w-full">
-        <img className="w-full h-screen" src={banner2} alt="" />
+        <img
+          className="w-full lg:h-screen mt-14 lg:mt-0"
+          src={banner1}
+          alt=""
+        />
       </div>
       <div className="md:grid grid-cols-4 gap-5 container mx-auto md:-mt-24">
         <div className="card w-auto shadow-xl">
