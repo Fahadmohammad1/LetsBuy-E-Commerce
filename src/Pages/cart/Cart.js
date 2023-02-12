@@ -24,11 +24,13 @@ const Cart = () => {
       <h3 className="my-10 text-xl font-bold uppercase text-center">
         Your added product is here
       </h3>
-      <div className="md:grid grid-cols-3 gap-10">
-        {products?.map((product) => (
-          <ProductCard key={product._id} product={product} />
-        ))}
-      </div>
+      {user && (
+        <div className="md:grid grid-cols-3 gap-10">
+          {products?.map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

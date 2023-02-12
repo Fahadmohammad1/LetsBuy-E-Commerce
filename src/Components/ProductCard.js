@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import image from "../Assets/images/banner/cardwatch (1).png";
 import addCartToDb from "../redux/thunk/products/addCartToDb";
@@ -12,8 +12,9 @@ import Loading from "../Shared/Loading";
 const ProductCard = (product) => {
   const { name, brand, category, price, quantity } = product.product;
   const { pathname } = useLocation();
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   if (loading) {
     <Loading />;
@@ -82,7 +83,11 @@ const ProductCard = (product) => {
           </button>
           {pathname !== "/cart" ? (
             <button
-              onClick={() => dispatch(addCartToDb(product.product, user.email))}
+              onClick={() =>
+                user
+                  ? dispatch(addCartToDb(product.product, user.email))
+                  : navigate("/login")
+              }
               className="btn btn-sm rounded-3xl text-primary bg-white hover:text-white"
             >
               <AiOutlineShoppingCart className="text-xl" />

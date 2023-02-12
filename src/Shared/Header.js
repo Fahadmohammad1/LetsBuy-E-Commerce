@@ -113,12 +113,14 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/cart" className="mx-5 relative">
-            <span className="badge absolute -top-2 -right-4 text-white border-0">
-              {cart.length}
-            </span>
-            <AiOutlineShoppingCart className="text-3xl" />
-          </Link>
+          {user && (
+            <Link to="/cart" className="mx-5 relative">
+              <span className="badge absolute -top-2 -right-4 text-white border-0">
+                {cart.length}
+              </span>
+              <AiOutlineShoppingCart className="text-3xl" />
+            </Link>
+          )}
           {user?.uid ? (
             <button
               onClick={async () => {
