@@ -19,9 +19,20 @@ const Header = () => {
     toast.error(userError, error);
   }
   const navigate = useNavigate();
+
+  window.onscroll = function () {
+    const navbar = document.querySelector("nav");
+    if (window.pageYOffset > 200) {
+      navbar.classList.remove("bg-transparent");
+      navbar.classList.add("bg-white");
+    } else {
+      navbar.classList.remove("bg-white");
+    }
+  };
+
   return (
-    <nav className="sticky top-0 z-40 bg-white mb-4">
-      <div className="navbar container mx-auto border-b-2 border-primary">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent w-full transition-all duration-50">
+      <div className="navbar container mx-auto border-primary">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
