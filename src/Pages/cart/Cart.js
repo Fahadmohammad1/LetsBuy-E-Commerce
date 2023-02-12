@@ -14,7 +14,7 @@ const Cart = () => {
 
   useEffect(() => {
     dispatch(fetchCartData(user?.email));
-  }, [user.email, dispatch]);
+  }, [user?.email, dispatch]);
 
   if (loading) {
     <Loading />;
