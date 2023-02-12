@@ -15,7 +15,10 @@ const Gallery = () => {
         <div class="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-16 2xl:px-0 w-full">
           <div class="flex flex-col jusitfy-center items-center space-y-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  md:gap-x-8 w-full">
-              <div class="relative group flex justify-center items-center h-full w-full">
+              <div
+                data-aos="zoom-in"
+                class="relative group flex justify-center items-center h-full w-full"
+              >
                 {isHovering && (
                   <h3 className="absolute uppercase font-bold text-xl">
                     wear good, looks good
@@ -35,7 +38,10 @@ const Gallery = () => {
               </div>
 
               <div class="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
-                <div class="relative group flex justify-center items-center h-full w-full">
+                <div
+                  data-aos="zoom-in"
+                  class="relative group flex justify-center items-center h-full w-full"
+                >
                   {isHoveringTwo && (
                     <h3 className="absolute uppercase font-bold text-xl">
                       Choose your best shoes
@@ -53,7 +59,10 @@ const Gallery = () => {
                   </button>
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
-                <div class="relative group flex justify-center items-center h-full w-full">
+                <div
+                  data-aos="zoom-in"
+                  class="relative group flex justify-center items-center h-full w-full"
+                >
                   {isHoveringThree && (
                     <h3 className="absolute uppercase font-bold text-xl">
                       The beauty of your hands
@@ -73,7 +82,10 @@ const Gallery = () => {
                 </div>
               </div>
 
-              <div class="relative group justify-center items-center h-full w-full hidden lg:flex">
+              <div
+                data-aos="zoom-in"
+                class="relative group justify-center items-center h-full w-full hidden lg:flex"
+              >
                 {isHoveringFour && (
                   <h3 className="absolute uppercase font-bold text-xl">
                     New fashion, New jewellery
