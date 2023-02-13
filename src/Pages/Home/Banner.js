@@ -13,7 +13,7 @@ const Banner = () => {
       <div className="w-full">
         <img
           className="w-full lg:h-screen mt-14 lg:mt-0"
-          src={banner1}
+          src={banner3}
           alt=""
         />
       </div>
