@@ -12,6 +12,10 @@ const Cart = () => {
   const dispatch = useDispatch();
   const [user, loading] = useAuthState(auth);
 
+  useEffect(() => {
+    dispatch(fetchCartData(user?.email));
+  }, [user?.email, dispatch]);
+
   if (loading) {
     <Loading />;
   }

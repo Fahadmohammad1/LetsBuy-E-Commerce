@@ -10,7 +10,7 @@ import Loading from "../Shared/Loading";
 import { addToCart } from "../redux/actions/productAction";
 
 const ProductCard = (product) => {
-  const { name, brand, category, price, quantity } = product.product;
+  const { name, brand, category, price, quantity, _id } = product.product;
   const { pathname } = useLocation();
   const [user, loading] = useAuthState(auth);
   const dispatch = useDispatch();
@@ -19,6 +19,7 @@ const ProductCard = (product) => {
   if (loading) {
     <Loading />;
   }
+
   return (
     <div className="card w-auto relative rounded-none">
       {pathname !== "/cart" ? (

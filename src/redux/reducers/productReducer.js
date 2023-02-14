@@ -8,7 +8,7 @@ const availableCart = JSON.parse(availableItem);
 
 const initialState = {
   products: [],
-  cart: availableCart || [],
+  cart: [],
 };
 
 const productReducer = (state = initialState, action) => {
