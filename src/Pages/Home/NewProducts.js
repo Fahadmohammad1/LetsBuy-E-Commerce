@@ -8,6 +8,7 @@ import ProductCard from "../../Components/ProductCard";
 const NewProducts = () => {
   const products = useSelector((state) => state?.product?.products);
   const dispatch = useDispatch();
+  console.log(products);
 
   useEffect(() => {
     dispatch(loadProductData());

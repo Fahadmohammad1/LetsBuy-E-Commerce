@@ -3,8 +3,6 @@ import {
   LOAD_CART_DATA,
   LOAD_PRODUCTS,
 } from "../actionTypes/actionTypes";
-const availableItem = localStorage.getItem("cart");
-const availableCart = JSON.parse(availableItem);
 
 const initialState = {
   products: [],
@@ -15,10 +13,6 @@ const productReducer = (state = initialState, action) => {
   const selectedProduct = state.cart.find(
     (product) => product._id === action.payload._id
   );
-  if (action.type === "ADD_TO_CART") {
-    localStorage.setItem("cart", JSON.stringify([...state.cart]));
-  }
-  console.log(selectedProduct);
   switch (action.type) {
     case LOAD_PRODUCTS:
       return {

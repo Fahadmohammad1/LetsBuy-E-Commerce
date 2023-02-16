@@ -7,7 +7,7 @@ import image from "../Assets/images/banner/cardwatch (1).png";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.init";
 import Loading from "../Shared/Loading";
-import { addToCart } from "../redux/actions/productAction";
+import addCartToDb from "../redux/thunk/products/addCartToDb";
 
 const ProductCard = (product) => {
   const { name, brand, category, price, quantity, _id } = product.product;
@@ -85,7 +85,9 @@ const ProductCard = (product) => {
           {pathname !== "/cart" ? (
             <button
               onClick={() =>
-                user ? dispatch(addToCart(product.product)) : navigate("/login")
+                user
+                  ? dispatch(addCartToDb(product.product, user?.email))
+                  : navigate("/login")
               }
               className="btn btn-sm rounded-3xl text-primary bg-white hover:text-white"
             >

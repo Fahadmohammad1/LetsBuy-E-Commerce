@@ -2,12 +2,7 @@ import React from "react";
 
 const DiscountBanner = () => {
   return (
-    <div
-      data-aos="flip-up"
-      data-aos-easing="linear"
-      data-aos-duration="1000"
-      className="container mx-auto mt-16"
-    >
+    <div className="container mx-auto mt-16">
       <div class="p-6 py-12 bg-secondary text-gray-900 rounded-full">
         <div class="container mx-auto">
           <div class="flex flex-col lg:flex-row items-center justify-between">
