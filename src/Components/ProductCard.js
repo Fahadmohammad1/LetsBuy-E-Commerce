@@ -10,7 +10,7 @@ import Loading from "../Shared/Loading";
 import addCartToDb from "../redux/thunk/products/addCartToDb";
 
 const ProductCard = (product) => {
-  const { name, brand, category, price, quantity, _id } = product.product;
+  const { name, brand, category, price, quantity } = product.product;
   const { pathname } = useLocation();
   const [user, loading] = useAuthState(auth);
   const dispatch = useDispatch();
