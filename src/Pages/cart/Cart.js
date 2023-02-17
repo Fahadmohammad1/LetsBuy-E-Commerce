@@ -20,10 +20,7 @@ const Cart = () => {
     <Loading />;
   }
   return (
-    <section className="container mx-auto">
-      <h3 className="my-10 text-xl font-bold uppercase text-center">
-        Your added product is here
-      </h3>
+    <section className="container mx-auto mt-24">
       {user && (
         <div className="md:grid grid-cols-3 gap-10">
           {products?.map((product) => (

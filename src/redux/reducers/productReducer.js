@@ -11,8 +11,9 @@ const initialState = {
 
 const productReducer = (state = initialState, action) => {
   const selectedProduct = state.cart.find(
-    (product) => product._id === action.payload._id
+    (product) => product.productId === action.payload._id
   );
+
   switch (action.type) {
     case LOAD_PRODUCTS:
       return {
@@ -27,8 +28,9 @@ const productReducer = (state = initialState, action) => {
     case ADD_TO_CART:
       if (selectedProduct) {
         const newCart = state.cart.filter(
-          (product) => product._id !== selectedProduct._id
+          (product) => product.productId !== selectedProduct.productId
         );
+        console.log(newCart);
 
         selectedProduct.quantity = selectedProduct.quantity + 1;
 
