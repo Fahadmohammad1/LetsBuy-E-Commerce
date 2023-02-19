@@ -1,5 +1,6 @@
 import {
   ADD_TO_CART,
+  DELETE_FROM_CART,
   LOAD_CART_DATA,
   LOAD_PRODUCTS,
 } from "../actionTypes/actionTypes";
@@ -44,6 +45,12 @@ const productReducer = (state = initialState, action) => {
         ...state,
         cart: [...state.cart, { ...action.payload, quantity: 1 }],
       };
+    case DELETE_FROM_CART:
+      if (selectedProduct.quantity > 1) {
+        console.log("hello");
+        return state;
+      }
+      return state;
 
     default:
       return state;
