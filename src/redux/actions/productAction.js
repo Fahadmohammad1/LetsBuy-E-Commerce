@@ -26,9 +26,9 @@ export const loadCartData = (products) => {
   };
 };
 
-export const deleteFromCart = (id) => {
+export const deleteFromCart = (product) => {
   return {
     type: DELETE_FROM_CART,
-    payload: id,
+    payload: product,
   };
 };

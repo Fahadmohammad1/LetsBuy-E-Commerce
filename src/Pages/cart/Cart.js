@@ -22,10 +22,12 @@ const Cart = () => {
   return (
     <section className="container mx-auto mt-24">
       {user && (
-        <div className="md:grid grid-cols-3 gap-10">
-          {products?.map((product) => (
-            <ProductCard key={product._id} product={product} />
-          ))}
+        <div>
+          <div className="md:grid grid-cols-3 gap-10">
+            {products?.map((product) => (
+              <ProductCard key={product._id} product={product} />
+            ))}
+          </div>
         </div>
       )}
     </section>

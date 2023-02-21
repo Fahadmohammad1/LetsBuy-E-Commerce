@@ -8,6 +8,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.init";
 import Loading from "../Shared/Loading";
 import addCartToDb from "../redux/thunk/products/addCartToDb";
+import { deleteFromCart } from "../redux/actions/productAction";
 
 const ProductCard = (product) => {
   const { name, brand, category, price, quantity } = product.product;
@@ -94,7 +95,10 @@ const ProductCard = (product) => {
               <AiOutlineShoppingCart className="text-xl" />
             </button>
           ) : (
-            <button className="btn btn-sm rounded-3xl text-red-600 bg-white hover:text-white">
+            <button
+              onClick={() => dispatch(deleteFromCart(product.product))}
+              className="btn btn-sm rounded-3xl text-red-600 bg-white hover:text-white"
+            >
               <RiDeleteBin2Fill className="text-xl" />
             </button>
           )}
