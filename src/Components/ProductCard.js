@@ -9,6 +9,7 @@ import auth from "../firebase/firebase.init";
 import Loading from "../Shared/Loading";
 import addCartToDb from "../redux/thunk/products/addCartToDb";
 import { deleteFromCart } from "../redux/actions/productAction";
+import deleteCartDb from "../redux/thunk/products/deleteCartDb";
 
 const ProductCard = (product) => {
   const { name, brand, category, price, quantity } = product.product;
@@ -96,7 +97,9 @@ const ProductCard = (product) => {
             </button>
           ) : (
             <button
-              onClick={() => dispatch(deleteFromCart(product.product))}
+              onClick={() =>
+                dispatch(deleteCartDb(product.product, user?.email))
+              }
               className="btn btn-sm rounded-3xl text-red-600 bg-white hover:text-white"
             >
               <RiDeleteBin2Fill className="text-xl" />
