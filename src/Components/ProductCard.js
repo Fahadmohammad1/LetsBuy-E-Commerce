@@ -8,7 +8,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.init";
 import Loading from "../Shared/Loading";
 import addCartToDb from "../redux/thunk/products/addCartToDb";
-import { deleteFromCart } from "../redux/actions/productAction";
 import deleteCartDb from "../redux/thunk/products/deleteCartDb";
 
 const ProductCard = (product) => {
