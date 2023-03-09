@@ -1,16 +1,19 @@
 import { toast } from "react-hot-toast";
 import { addToCart } from "../../actions/productAction";
 
-const addCartToDb = (product, email) => {
+const addCartToDb = (product, userEmail) => {
   return async (dispatch, getState) => {
-    const cartItem = { ...product, email: email };
-    const res = await fetch(`http://localhost:5000/v1/cart-item/${email}`, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(cartItem),
-    });
+    const cartItem = { ...product, email: userEmail };
+    const res = await fetch(
+      `http://localhost:5000/v1/cart-item/query?userEmail=${userEmail}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(cartItem),
+      }
+    );
     const data = await res.json();
 
     if (data.success) {
