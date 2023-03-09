@@ -18,6 +18,7 @@ const productReducer = (state = initialState, action) => {
   const availableProduct = state.cart.find(
     (product) => product.productId === action.payload.productId
   );
+  console.log(availableProduct);
 
   switch (action.type) {
     case LOAD_PRODUCTS:
